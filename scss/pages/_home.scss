@@ -1,0 +1,213 @@
+@use "../base";
+@use "../components";
+
+#main-home {
+
+    /* Section - Introduction */
+    #section-home-intro {
+        header {
+            margin-bottom: .5em;
+        }
+
+        .row>.column {
+            @include base.columns-two();
+        }
+
+        #portrait {
+            padding-right: 0;
+            margin: 0;
+
+
+            #portrait__image {
+                padding: 0;
+            }
+        }
+
+        #toolkit {
+            padding-left: 0;
+            margin: 0;
+
+            #toolkit__list {
+                list-style-type: none;
+                margin-left: 1em;
+            }
+        }
+    }
+
+    .account-links {
+        @include base.center();
+        margin-top: .5em;
+
+        .account-link__link {
+            justify-content: center;
+        }
+    }
+
+    /* Section - Work */
+    #section-home-work {
+        background-color: base.$secondary;
+
+        .section-header {
+            color: base.$neutral-very-light;
+        }
+
+        .column:nth-of-type(4) {
+            display: none;
+        }
+    }
+
+    /* Section - About */
+    #section-home-about {
+        .image-card a {
+            @include base.card();
+            padding: 0;
+            margin: 0;
+            height: auto;
+            width: 100%;
+            border: none;
+        }
+    }
+
+    /* Responsive Medium >= 768px */
+    @media screen and (min-width: 768px) {
+        #section-home-intro {
+            .row>.column {
+                @include base.columns-three();
+            }
+
+            #contact {
+                margin-left: 0;
+                margin-right: 0;
+                align-self: flex-start;
+            }
+        }
+
+        #section-home-experience {
+            .section-header {
+                text-align: center;
+
+                p {
+                    @include base.center();
+                    max-width: 600px;
+                }
+            }
+        }
+
+        #section-home-work,
+        #section-home-blog {
+            .column:first-of-type {
+                flex-basis: 100%;
+            }
+        }
+
+        #section-home-about {
+            .row>.column {
+                @include base.columns-three();
+            }
+        }
+    }
+
+    /* Responsive Large >= 900px */
+    @media screen and (min-width: 900px) {
+        #section-home-blog .row .column {
+            flex-basis: 33%;
+        }
+    }
+
+    /* Responsive Large >= 1100px */
+    @media screen and (min-width: 1100px) {
+
+        /* Custom styling for the intro section on large screens.
+    CSS grid used here to overcome some of the limitations of flexbox in
+    re-ordering and repositioning child elements. */
+        #section-home-intro {
+            .row {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+
+                .column {
+                    display: block;
+                }
+            }
+
+            .section-header {
+                order: 2;
+                grid-column: 5 / 12;
+                grid-row: 1;
+                flex-basis: auto;
+            }
+
+            #portrait {
+                order: 1;
+                grid-column: 1 / 5;
+                grid-row: 1 / 3;
+                margin-right: 2em;
+                max-width: 320px;
+            }
+
+            #about-me {
+                order: 3;
+                grid-column: 5 / 12;
+                grid-row: 2;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: stretch;
+
+                p {
+                    flex-basis: 71%;
+                }
+            }
+
+            #toolkit {
+                order: 4;
+                grid-column: 1 / -1;
+                grid-row: 3;
+                padding: .75em;
+                flex-direction: row;
+                justify-content: flex-start;
+
+                #toolkit__list {
+                    li {
+                        display: inline;
+                        padding: 0 3em;
+                        border-right: 2px solid base.$neutral-light;
+
+                        &:first-of-type {
+                            padding-left: 0;
+                        }
+
+                        &:last-of-type {
+                            border-right: none;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        // Change Experience and Work sections to a 3-column layout on large screens
+        #section-home-experience {
+            .section-header {
+                flex-basis: 33%;
+                text-align: left;
+            }
+        }
+
+        // Change layout of first featured project card from column to row layout
+        #section-home-work {
+            .column:first-of-type {
+                flex-basis: 100%;
+
+                .project-card {
+                    @include base.card-horizontal();
+                }
+            }
+
+            // Show an additional featured project image on large screens
+            .column:nth-of-type(4) {
+                display: flex;
+            }
+        }
+    }
+}

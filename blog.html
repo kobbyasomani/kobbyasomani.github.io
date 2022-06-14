@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kobby Asomani | Full Stack Web Developer</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <!-- Main naviagtion menu component -->
+        <nav id="nav-main">
+            <div class="row">
+                <span id="logo"><a href="./">KA</a></span>
+                <ul id="nav-main__links">
+                    <li id="nav-main__home" class="nav-main__menu-item"><a href="./">Home</a></li>
+                    <li id="nav-main__about" class="nav-main__menu-item"><a href="./about.html">About</a></li>
+                    <li id="nav-main__work" class="nav-main__menu-item"><a href="./work.html">Work</a></li>
+                    <li id="nav-main__blog" class="nav-main__menu-item"><a class="active" href="./blog.html">Blog</a></li>
+                    <li id="nav-main__contact" class="nav-main__menu-item"><a href="./contact.html">Contact</a></li>
+                    <li id="nav-main__mobile-open">
+                        <button id="nav-main__mobile-open-button">
+                            <img src="./images/icons/dark/bars-solid.svg" alt="Open the full-screen navigation menu">
+                        </button>
+                    </li>
+                </ul>
+                <button id="nav-main__mobile-close"><img src="./images/icons/dark/xmark-solid.svg"
+                        alt="Close the full-screen navigation menu"></button>
+            </div>
+        </nav>
+    </header>
+    <!-- Overlay for full-screen maenu mode -->
+    <div id="nav-main__mobile-overlay"></div>
+    <main id="main-blog">
+        <!-- Section Header -->
+        <section class="section-header">
+            <div class="row">
+                <div class="column">
+                    <h1>Blog</h1>
+                    <p>Read some of my latest thoughts on web development, design, and technology.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Work -->
+        <section id="blog-post-list">
+            <h2>Recent Blog Posts</h2>
+            <div class="row">
+                <!-- Blog Post 1 -->
+                <div class="column">
+                    <!-- Blog Post Summary Card component -->
+                    <article class="blog-summary-card">
+                        <div class="blog-summary-card__image"><a href="./blog/blog-post-1.html"><img class="image-card"
+                                    src="./images/interests/wet-grass.jpg"
+                                    alt="Long green grass with water droplets clinging to it.">
+                            </a>
+                        </div>
+                        <div class="blog-summary-card__body">
+                            <h3 class="blog-summary-card__title">
+                                <a href="./blog/blog-post-1.html">Blog Post 1</a>
+                            </h3>
+                            <span class="blog-summary__date"><time datetime="2022-06-12">12 June 2022</time></span>
+                            <p class="blog-summary-card__description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, maiores. Adipisci
+                                illo doloribus maxime explicabo sunt dolorem, asperiores rem consectetur commodi
+                                reiciendis deserunt unde optio hic placeat quo nobis temporibus!
+                            </p>
+                            <div class="blog-summary-card__footer">
+                                <a class="blog-summary-card__link" href="./blog/blog-post-1.html">Read blog post</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Blog Post 2 -->
+                <div class="column">
+                    <!-- Blog Post Summary Card component -->
+                    <article class="blog-summary-card">
+                        <div class="blog-summary-card__image"><a href="./blog/blog-post-2.html"><img class="image-card"
+                                    src="./images/interests/lights.jpg"
+                                    alt="A string of solar light bulbs hanging from an awning.">
+                            </a>
+                        </div>
+                        <div class="blog-summary-card__body">
+                            <h3 class="blog-summary-card__title">
+                                <a href="./blog/blog-post-2.html">Blog Post 2</a>
+                            </h3>
+                            <span class="blog-summary__date"><time datetime="2022-06-11">11 June 2022</time></span>
+                            <p class="blog-summary-card__description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, maiores. Adipisci
+                                illo doloribus maxime explicabo sunt dolorem, asperiores rem consectetur commodi
+                                reiciendis deserunt unde optio hic placeat quo nobis temporibus!
+                            </p>
+                            <div class="blog-summary-card__footer">
+                                <a class="blog-summary-card__link" href="./blog/blog-post-2.html">Read blog post</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Blog Post 3 -->
+                <div class="column">
+                    <!-- Blog Post Summary Card component -->
+                    <article class="blog-summary-card">
+                        <div class="blog-summary-card__image"><a href="./blog/blog-post-3.html"><img class="image-card"
+                                    src="./images/interests/leaves.jpg"
+                                    alt="Sharp leaves covered in water droplets with background bokeh.">
+                            </a>
+                        </div>
+                        <div class="blog-summary-card__body">
+                            <h3 class="blog-summary-card__title">
+                                <a href="./blog/blog-post-3.html">Blog Post 3</a>
+                            </h3>
+                            <span class="blog-summary__date"><time datetime="2022-06-10">10 June 2022</time></span>
+                            <p class="blog-summary-card__description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, maiores. Adipisci
+                                illo doloribus maxime explicabo sunt dolorem, asperiores rem consectetur commodi
+                                reiciendis deserunt unde optio hic placeat quo nobis temporibus!
+                            </p>
+                            <div class="blog-summary-card__footer">
+                                <a class="blog-summary-card__link" href="./blog/blog-post-3.html">Read blog post</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Blog Post 4 -->
+                <div class="column">
+                    <!-- Blog Post Summary Card component -->
+                    <article class="blog-summary-card">
+                        <div class="blog-summary-card__image"><a href="./blog/blog-post-4.html"><img class="image-card"
+                                    src="./images/interests/stove.jpg"
+                                    alt="A pan on a metal stove with blue flame underneath.">
+                            </a>
+                        </div>
+                        <div class="blog-summary-card__body">
+                            <h3 class="blog-summary-card__title">
+                                <a href="./blog/blog-post-4.html">Blog Post 4</a>
+                            </h3>
+                            <span class="blog-summary__date"><time datetime="2022-06-09">9 June 2022</time></span>
+                            <p class="blog-summary-card__description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, maiores. Adipisci
+                                illo doloribus maxime explicabo sunt dolorem, asperiores rem consectetur commodi
+                                reiciendis deserunt unde optio hic placeat quo nobis temporibus!
+                            </p>
+                            <div class="blog-summary-card__footer">
+                                <a class="blog-summary-card__link" href="./blog/blog-post-4.html">Read blog post</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Blog Post 5 -->
+                <div class="column">
+                    <!-- Blog Post Summary Card component -->
+                    <article class="blog-summary-card">
+                        <div class="blog-summary-card__image"><a href="./blog/blog-post-5.html"><img class="image-card"
+                                    src="./images/interests/book.jpg"
+                                    alt="A book with an ornate bookmark in it.">
+                            </a>
+                        </div>
+                        <div class="blog-summary-card__body">
+                            <h3 class="blog-summary-card__title">
+                                <a href="./blog/blog-post-5.html">Blog Post 5</a>
+                            </h3>
+                            <span class="blog-summary__date"><time datetime="2022-06-08">8 June 2022</time></span>
+                            <p class="blog-summary-card__description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, maiores. Adipisci
+                                illo doloribus maxime explicabo sunt dolorem, asperiores rem consectetur commodi
+                                reiciendis deserunt unde optio hic placeat quo nobis temporibus!
+                            </p>
+                            <div class="blog-summary-card__footer">
+                                <a class="blog-summary-card__link" href="./blog/blog-post-5.html">Read blog post</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="flex-line-break"></div>
+                <a class="button button-primary" href="./about.html">More about me</a>
+            </div>
+        </section>
+    </main>
+    <!-- Footer component -->
+    <footer>
+        <div id="footer-inner">
+            <div id="footer-inner__sitemap" class="column">
+                <ul id="sitemap">
+                    <li>
+                        <h2 class="footer-heading">
+                            Sitemap
+                        </h2>
+                    </li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./work.html">Work</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div id="footer-inner__social" class="column">
+                <div id="footer-inner__follow">
+                    <h2 class="footer-heading">Follow me</h2>
+                    <!-- Social Icons Widget component -->
+                    <div class="social-icons-widget">
+                        <ul class="social-icons-widget__list">
+                            <li class="social-icons-widget__list-item">
+                                <a class="social-icon__github" href="https://github.com/kobbyasomani"
+                                    target="_blank"><img src="./images/icons/light/github-brands-light.svg"
+                                        alt="GitHub icon"></a>
+                            </li>
+                            <li class="social-icons-widget__list-item">
+                                <a class="social-icon__linkedin" href="https://www.linkedin.com/in/kobbyasomani/"
+                                    target="_blank"><img src="./images/icons/light/linkedin-brands-light.svg"
+                                        alt="LinkedIn icon"></a>
+                            </li>
+                            <li class="social-icons-widget__list-item">
+                                <a class="social-icon__twitter" href="https://twitter.com/kobbyasomani"
+                                    target="_blank"><img src="./images/icons/light/twitter-brands-light.svg"
+                                        alt="Twitter icon"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="footer-inner__contact">
+                    <a id="mail" class="button" href="./contact.html"><span class="mail__icon"></span>Say hi!</a>
+                </div>
+            </div>
+            <span id="copyright">© 2022 Kwabena Asomani</span>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./functions.js"></script>
+</body>
+
+</html>

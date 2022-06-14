@@ -1,0 +1,44 @@
+@use "base";
+
+/* ANIMATION */
+/* Card hover effects */
+.project-card,
+.blog-post-card,
+.project-summary-card,
+.blog-summary-card,
+#section-home-about .image-card a {
+    &:hover {
+        @include base.drop-shadow();
+        @include base.card-hover();
+    }
+}
+
+.project-summary-card,
+.blog-summary-card {
+    &:hover {
+        background-color: base.$neutral-light;
+    }
+}
+
+/* Icon hover effects */
+a[class*="icon"],
+#logo,
+#nav-main__mobile-close {
+    transition: base.$transition-short;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.3);
+        cursor: pointer;
+    }
+}
+
+#logo {
+
+    &:hover,
+    &:focus {
+        a {
+            color: base.$primary-link;
+        }
+    }
+}

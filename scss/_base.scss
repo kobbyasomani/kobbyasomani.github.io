@@ -1,0 +1,283 @@
+//  VARIABLES //
+// Colour variables
+$primary: #b40b08;
+$primary-link: #b90c09;
+$secondary: #0057a8;
+$secondary-link: #005aad;
+$neutral-very-light: #fff;
+$neutral-light: #edf2f4;
+$neutral-medium: #8d99ae;
+$neutral-dark: #2b2d42;
+$neutral-very-dark: #000;
+
+// Layout variables
+$max-website-width: 1200px; // Maximum width of all content
+$nav-main-padding: calc(1.5rem + 65px); // Padding to allow for main navbar
+$column-padding-side: 0.75em; // Default Column padding (left and right)
+$card-padding: 1em 1.25em 1.25em 1.25em; // Default Card padding
+
+// Animation variables
+$transition-short: all .3s ease-in-out;
+
+// MIXINS //
+// Mixins - Layout
+@mixin fixed-width() {
+    max-width: $max-website-width;
+    padding: 0 2em;
+    margin: auto;
+}
+
+@mixin center() {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin horizontal-rule() {
+    padding-bottom: 2em;
+    border-bottom: .2em solid $neutral-light;
+}
+
+// Mixins - Navigation 
+@mixin nav() {
+    display: flex;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    a {
+        text-decoration: none;
+
+        li {
+            display: inline;
+        }
+    }
+}
+
+@mixin icon {
+    display: inline-block;
+    width: 1.2em;
+}
+
+@mixin button() {
+    border-radius: 2em;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 600;
+    padding: .75em 1.5em;
+    margin-top: 1.25em;
+    border: none;
+    transition: $transition-short;
+    background-color: $neutral-dark;
+    color: $neutral-very-light;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.025);
+        letter-spacing: .025em;
+    }
+}
+
+// Mixins - Column Divisions 
+@mixin columns-one() {
+    flex-basis: 100%;
+}
+
+@mixin columns-two() {
+    flex-basis: 50%;
+}
+
+@mixin columns-three() {
+    flex-basis: 33%;
+}
+
+// Mixins - Colours 
+@mixin color-primary() {
+    background-color: $primary;
+    color: $neutral-very-light;
+}
+
+@mixin color-secondary() {
+    background-color: $secondary;
+    color: $neutral-very-light;
+}
+
+@mixin drop-shadow() {
+    filter: drop-shadow(.1em .1em .15em rgba(0, 0, 0, .25));
+}
+
+@mixin round-corners() {
+    border-radius: 1em;
+}
+
+// Mixins - Cards
+// Mixin - Default card
+@mixin card() {
+    @include round-corners();
+    width: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    background-color: $neutral-very-light;
+    padding: $card-padding;
+    transition: $transition-short;
+    font-size: clamp(16px, .95em, 10vw);
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    a[class*="card__link"] {
+        display: inline-block;
+        margin-top: .5em;
+    }
+
+    p {
+        max-width: 100%;
+    }
+
+    & *[class*="card__header"],
+    & *[class*="card__title"] {
+
+        a {
+            transition: $transition-short;
+            text-decoration: none;
+            color: $neutral-very-dark;
+
+            &:hover {
+                color: $secondary-link;
+            }
+        }
+    }
+}
+
+// Mixin - Horizontal Card — place card body content beside instead of below the image.
+@mixin card-horizontal() {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    & *[class*="card__header"],
+    & *[class*="card__footer"] {
+        flex-basis: 100%;
+    }
+
+    & *[class*="card__image"] {
+        width: 50%;
+    }
+
+    & *[class*="card__body"] {
+        flex-basis: 50%;
+        padding-left: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+
+        p {
+            max-width: 90%;
+        }
+    }
+
+    & *[class*="card__link"] {
+        @include button();
+        text-decoration: none;
+    }
+}
+
+// Mixin - Card header or footer area (e.g., for title or row of icons)
+@mixin card-header-footer() {
+
+    & [class*="card__header"],
+    & [class*="card__footer"] {
+        display: flex;
+        justify-content: space-between;
+
+        & [class*="card__ext-links"] {
+            flex: 0 1 auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            & [class*="card__icon"] {
+                @include icon();
+                padding: .2em;
+                box-sizing: content-box;
+            }
+        }
+    }
+}
+
+// Mixin - Card hover effect 
+@mixin card-hover {
+    transform: translateY(-.2em);
+}
+
+/* Style Resets and Defaults */
+// Reset padding and margin on all elements, set page font, border-box as default
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+// Set minimum, preferred, and maximum font sizes
+html {
+    font-size: clamp(17px, 18px, 10vw);
+}
+
+// Set the body to always fill the viewport even if content is shorter
+body,
+main {
+    min-height: calc(100vh - 251.5px);
+    overflow-x: hidden;
+}
+
+// Generic styling for links in the page body
+main {
+    display: flex;
+    flex-wrap: wrap;
+
+    &>section {
+        flex: 1 0 100%;
+    }
+
+    a {
+        color: $secondary-link;
+        text-decoration: underline;
+        font-weight: 600;
+    }
+
+    @media screen and (max-width: 768px) {
+        &.mobile-mode {
+            display: none;
+        }
+    }
+}
+
+// HEADINGS & TEXT //
+h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.15em;
+    font-weight: 600;
+}
+
+// Limit width of paragraphs to constrain line length on wider viewports for easier reading
+p {
+    max-width: 500px;
+    margin-top: .75em;
+}

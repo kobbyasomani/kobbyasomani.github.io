@@ -1,0 +1,81 @@
+@use "base";
+
+/* || LAYOUT || */
+/* Sections */
+section,
+.blog-post__header,
+.project__header {
+    padding: 2.5em 0;
+
+    &:nth-of-type(1) {
+        padding-top: base.$nav-main-padding;
+    }
+
+    // Add padding to accommodate nav bar
+    &:nth-of-type(2n) {
+        background-color: base.$neutral-light;
+    }
+
+    .section-header {
+        max-width: base.$max-website-width;
+        padding: 0 base.$column-padding-side;
+        margin-bottom: 1em;
+        flex-basis: 100%;
+    }
+}
+
+/* Rows & Columns */
+.row {
+    @include base.fixed-width();
+    padding: 0 .75em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+        margin: .25em 0;
+        padding: 0 base.$column-padding-side;
+    }
+}
+
+// Used to break a flex row and start a new flex line when needed
+.flex-line-break {
+    flex-basis: 100%;
+    width: 0;
+}
+
+// Horizontal divider
+.divider-100 {
+    @include base.horizontal-rule();
+    width: 100%;
+}
+
+// Initialise hero sections as centered columns on child pages
+.section-header>.row {
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .row {
+        padding: 0 2em;
+    }
+
+    // Change hero section to a row layout
+    .section-header>.row {
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        .column {
+            align-items: flex-start;
+        }
+    }
+}

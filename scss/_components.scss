@@ -1,0 +1,475 @@
+@use "base";
+
+/* COMPONENTS */
+/* Component — Nav Bar */
+#nav-main {
+    @include base.nav();
+    background-color: base.$neutral-light;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+
+    // Add additional padding to line up with flex columns
+    .row {
+        padding-left: 2em + base.$column-padding-side;
+        padding-right: 2em + base.$column-padding-side;
+        align-items: center;
+    }
+
+    a {
+        color: base.$neutral-very-dark;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    /* Site Logo */
+    #logo {
+        font-size: 1.2em;
+        font-weight: 700;
+    }
+
+    // Style main nav links for hover and focus
+    #nav-main__links {
+        .nav-main__menu-item a {
+            margin-left: 1em;
+            padding: .2em;
+            transition: base.$transition-short;
+
+            &:hover,
+            &:focus,
+            &.active {
+                font-weight: 700;
+                border-bottom: .25em solid base.$primary-link;
+            }
+        }
+    }
+
+    /* Nav Bar 'hamburger' menu styling */
+    // Hamburger menu toggle button
+    #nav-main__mobile-open-button {
+        border: none;
+        background-color: transparent;
+
+        img {
+            width: 18px;
+            margin-bottom: -3px;
+        }
+    }
+
+    // Hide close button by default
+    #nav-main__mobile-close {
+        @include base.icon();
+        display: none;
+        width: 1.6em;
+        border: none;
+        background-color: transparent;
+        padding: 0 .25em;
+    }
+
+    // Style Nav Bar for 'mobile mode' (hamburger menu toggled)
+    @media screen and (max-width: 768px) {
+        &.mobile-mode {
+
+            //Style close button for mobile menu
+            #nav-main__mobile-close {
+                display: inline-block;
+            }
+
+            #nav-main__links {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 65px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: calc(100vh - 230px);
+                text-align: center;
+                font-size: 13vw;
+
+                #nav-main__mobile-open {
+                    display: none;
+                }
+
+                .nav-main__menu-item {
+                    display: block;
+                    margin-bottom: .25em;
+
+                    a {
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Full-screen menu overlay
+#nav-main__mobile-overlay {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+
+        &.mobile-mode {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: base.$neutral-very-light;
+        }
+    }
+}
+
+// Hide inline menu by default (hamburger only for mobile)
+#nav-main li:not(#nav-main__mobile-open) {
+    display: none;
+}
+
+/* Component – Button */
+.button {
+    @include base.button();
+    @include base.center();
+}
+
+.button-primary {
+    @extend .button;
+    @include base.color-primary();
+}
+
+.button-secondary {
+    @extend .button;
+    @include base.color-secondary();
+}
+
+.button-light {
+    @extend .button;
+    background-color: base.$neutral-very-light;
+    color: base.$neutral-very-dark
+}
+
+/* CARDS */
+/* Component - Image Card */
+.image-card {
+    @include base.card();
+    display: flex;
+    padding: 0;
+
+    img {
+        border-radius: inherit;
+        object-fit: cover;
+    }
+}
+
+/* Component - Info Card */
+.info-card {
+    @include base.card();
+
+    .info-card__list {
+        margin-left: 1em;
+        margin-top: .5em;
+    }
+}
+
+/* Component - Summary Card — A card without background-color 
+or border for use on project and blog list pages */
+.summary-card {
+    @include base.card;
+    background-color: transparent;
+    padding: base.$card-padding;
+    @include base.card-header-footer();
+    padding: .25em .75em;
+
+    & *[class*="card__title"] {
+        margin-top: 1em;
+        text-align: center;
+    }
+}
+
+/* Component - Project Card */
+.project-card {
+    @include base.card();
+    background-color: base.$neutral-very-light;
+
+    @include base.card-header-footer();
+
+    .project-card__image {
+        @extend .image-card;
+        border-radius: .5em;
+        border: 1px solid base.$neutral-light;
+
+        img {
+            height: 100%;
+            border-radius: .5em;
+        }
+    }
+
+    .project-card__body {
+        flex-basis: 100%;
+    }
+}
+
+/* Component - Project Summary Card */
+.project-summary-card {
+    @extend .summary-card;
+
+    .project-summary-card__title {
+        text-align: left;
+    }
+
+    img {
+        border-radius: .5em;
+    }
+}
+
+/* Component - Project Contributors Card */
+.project-contributors-card {
+    @extend .info-card;
+    background-color: base.$neutral-light;
+
+    .project-contributors-card__heading {
+        margin-bottom: .5em;
+    }
+
+    .project-contributors-card__list {
+        list-style-type: none;
+
+        .project-contributors-card__list-item {
+            margin-bottom: .5em;
+
+            &:before {
+                @include base.icon();
+                content: url(./images/icons/dark/user-solid.svg);
+                width: 1em;
+            }
+        }
+    }
+}
+
+/* Component - Blog Post Card */
+.blog-post-card {
+    transition: base.$transition-short;
+    width: 100%;
+
+    .blog-post-card__header {
+
+        .blog-post-card__image a {
+            @extend .image-card;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+    }
+
+    .blog-post-card__body {
+        @include base.card();
+        margin-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .blog-post-card__date {
+        font-size: clamp(16px, .9em, .9em);
+    }
+}
+
+/* Component - Blog Summary Card */
+.blog-summary-card {
+    @extend .summary-card;
+    align-items: center;
+
+    .blog-summary-card__image {
+        width: 100%;
+        height: auto;
+    }
+
+    .blog-summary-card__title {
+        text-align: left;
+        width: 100%;
+    }
+
+    .blog-summary__date {
+        color: base.$neutral-medium;
+    }
+
+    img {
+        border-radius: .5em;
+    }
+}
+
+/* Component - Interest Card */
+.interest-card {
+    @extend .summary-card;
+}
+
+/* Component – Footer */
+footer {
+    background-color: base.$neutral-dark;
+
+    a {
+        color: base.$neutral-very-light;
+        text-decoration: none;
+    }
+
+    #footer-inner {
+        @include base.fixed-width();
+        padding-top: 2em;
+        padding-bottom: 1.5em;
+        color: base.$neutral-very-light;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            flex: 1 1 auto;
+            padding: .5em base.$column-padding-side;
+
+            &#footer-inner__sitemap {
+                order: 1;
+
+                #sitemap {
+                    li {
+                        list-style-type: none;
+                    }
+
+                    a {
+                        transition: base.$transition-short;
+
+                        &:hover,
+                        &:focus {
+                            font-weight: 700;
+                            border-left: .25em solid base.$neutral-very-light;
+                            padding-left: .25em;
+                        }
+                    }
+                }
+            }
+
+            &#footer-inner__social {
+                order: 2;
+                align-items: stretch;
+                justify-content: space-between;
+
+                #footer-inner__follow,
+                #footer-inner__contact {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    #mail {
+                        margin-top: .5em;
+                    }
+                }
+            }
+        }
+
+        #copyright {
+            order: 3;
+            flex-basis: 100%;
+            margin-top: 1em;
+            text-align: center;
+        }
+    }
+}
+
+// Style Footer for 'mobile mode' (hamburger menu toggled)
+@media screen and (max-width: 768px) {
+    footer.mobile-mode {
+        position: fixed;
+        z-index: 2;
+        bottom: 0;
+        width: 100%;
+
+        #footer-inner {
+            padding-top: 0;
+            padding-bottom: .5em;
+
+            #footer-inner__sitemap {
+                display: none;
+            }
+
+            #copyright {
+                display: none;
+            }
+        }
+    }
+}
+
+/* Component – Social Icons Widget */
+.social-icons-widget {
+    width: 100%;
+    max-width: 100px;
+
+    ul {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1em;
+
+        li {
+            @include base.icon();
+            flex: 0 0 auto;
+
+            a {
+                display: block;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/* Component - Professional Account Links */
+.account-links {
+    display: block;
+
+    & [class*="__link"] {
+        display: flex;
+        text-decoration: none;
+        margin-top: .25em;
+        transition: base.$transition-short;
+
+        &:hover,
+        &:focus {
+            transform: scale(1.05);
+        }
+    }
+
+    & [class*="__text"] {
+        display: inline-block;
+        text-decoration: underline;
+    }
+
+    & [class*="__icon"] {
+        @include base.icon();
+        margin-right: .5em;
+    }
+}
+
+/* Component - Project Page links (individual project page) */
+.project-links {
+    @extend .account-links;
+}
+
+/* Component – Mail Button (Say hi!) */
+#mail {
+    max-width: 150px;
+    background-color: base.$neutral-very-light;
+    color: base.$neutral-dark;
+
+    .mail__icon::after {
+        @include base.icon();
+        content: url(./images/icons/dark/paper-plane-solid.svg);
+        margin: 0 .25em 0 0;
+        width: 1em;
+    }
+}

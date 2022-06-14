@@ -1,0 +1,106 @@
+@use "../base";
+
+main[id*="main-project"] {
+
+    /* Display the main section on project pages as a block
+    and prevent main page content showing in 'mobile mode' */
+    &:not(main[class*="mobile-mode"]) {
+        display: block;
+    }
+
+
+    #project {
+        background-color: base.$neutral-very-light;
+        padding-top: 0;
+        @include base.center();
+
+        .row {
+            justify-content: flex-start;
+
+            .column {
+                align-items: flex-start;
+            }
+        }
+
+        p {
+            max-width: 100%;
+            justify-self: flex-start;
+
+            &:last-of-type {
+                padding-bottom: .5em;
+            }
+        }
+
+    }
+
+    .project__featured-image {
+        width: 100%;
+    }
+
+    .project__header {
+        padding-bottom: 1em;
+    }
+
+    section {
+        &:nth-of-type(1) {
+            padding-top: 0;
+            padding-bottom: 1em;
+        }
+    }
+
+    h2 {
+        margin-top: .5em;
+    }
+
+    .project__heading-related-posts {
+        @include base.center();
+        padding-top: 0;
+    }
+
+    .project__related {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 2.5em;
+
+        .column {
+            flex-basis: 50%;
+
+            .project-summary-card {
+                padding-bottom: 1em;
+            }
+        }
+    }
+
+    .project__subheading {
+        color: base.$neutral-medium;
+    }
+}
+
+// Stack related post columns when screen is too small
+@media screen and (max-width: 550px) {
+    #main-project-1 {
+
+        .project__related {
+            .column {
+                flex-basis: 100%;
+            }
+        }
+    }
+}
+
+// Place professional links above contributors when screen is wide enough
+@media screen and (min-width: 693px) {
+    #contributors {
+        .column:nth-of-type(1) {
+            order: 2;
+        }
+
+        .column:nth-of-type(2) {
+            order: 1;
+        }
+
+        .divider-100 {
+            order: 3;
+        }
+    }
+}

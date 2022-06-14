@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kobby Asomani | Full Stack Web Developer</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <!-- Main naviagtion menu component -->
+        <nav id="nav-main">
+            <div class="row">
+                <span id="logo"><a href="./">KA</a></span>
+                <ul id="nav-main__links">
+                    <li id="nav-main__home" class="nav-main__menu-item"><a href="./">Home</a></li>
+                    <li id="nav-main__about" class="nav-main__menu-item"><a class="active" href="./about.html">About</a></li>
+                    <li id="nav-main__work" class="nav-main__menu-item"><a href="./work.html">Work</a></li>
+                    <li id="nav-main__blog" class="nav-main__menu-item"><a href="./blog.html">Blog</a></li>
+                    <li id="nav-main__contact" class="nav-main__menu-item"><a href="./contact.html">Contact</a></li>
+                    <li id="nav-main__mobile-open">
+                        <button id="nav-main__mobile-open-button">
+                            <img src="./images/icons/dark/bars-solid.svg" alt="Open the full-screen navigation menu">
+                        </button>
+                    </li>
+                </ul>
+                <button id="nav-main__mobile-close"><img src="./images/icons/dark/xmark-solid.svg"
+                        alt="Close the full-screen navigation menu"></button>
+            </div>
+        </nav>
+    </header>
+    <!-- Overlay for full-screen maenu mode -->
+    <div id="nav-main__mobile-overlay"></div>
+    <main>
+        <!-- Section Header -->
+        <section class="section-header">
+            <div class="row">
+                <div id="portrait-about" class="column">
+                    <div id="portrait__image" class="image-card">
+                        <img src="./images/kobby-portrait-closeup-512px.jpg"
+                            alt="A portrait of web developer Kobby Asomani.">
+                    </div>
+                </div>
+                <div class="column">
+                    <h1>About me</h1>
+                    <p>My interests and hobbies outside of web development include drawing, reading, music, video games,
+                        and photography.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Interests -->
+        <section id="interests">
+            <div class="row">
+                <div class="section-header">
+                    <h2>My Interests & Hobbies</h2>
+                </div>
+                <div id="reading" class="column">
+                    <!-- Interest Card component -->
+                    <div class="interest-card">
+                        <div class="interest-card__image">
+                            <img class="image-card" src="./images/interests/bookshelf.jpg"
+                                alt="A wooden bookshelf with books on it.">
+                        </div>
+                        <div class="interest-card__body">
+                            <h3 class="interest-card__title">
+                                Reading
+                            </h3>
+                            <p class="interest-card__description">
+                                I've been a lover of books since a young age, and enjoy a wide range of reads including
+                                fantasy and science fiction, literary novels, and humour.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="music" class="column">
+                    <div class="interest-card">
+                        <div class="interest-card__image">
+                            <img class="image-card" src="./images/interests/guitar.jpg"
+                                alt="A bright blue electric guitar.">
+                        </div>
+                        <div class="interest-card__body">
+                            <h3 class="interest-card__title">
+                                Music
+                            </h3>
+                            <p class="interest-card__description">
+                                I enjoy listening to and playing music when I have the chance, having played cello all
+                                through school and taken up the guitar as a teenager.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="column">
+                    <div class="interest-card">
+                        <div class="interest-card__image">
+                            <img class="image-card" src="./images/interests/seascape.jpg"
+                                alt="A digital painting of a seascape.">
+                        </div>
+                        <div class="interest-card__body">
+                            <h3 class="interest-card__title">
+                                Art & Photography
+                            </h3>
+                            <p class="interest-card__description">
+                                I love drawing and painting, both digital and traditional, and have tried to maintain a
+                                skethcbook every year for the past 10 years or so. I've recently taken up photography.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="gaming" class="column">
+                    <div class="interest-card">
+                        <div class="interest-card__image">
+                            <img class="image-card" src="./images/interests/controller.jpg"
+                                alt="A PlayStation controller.">
+                        </div>
+                        <div class="interest-card__body">
+                            <h3 class="interest-card__title">
+                                Gaming
+                            </h3>
+                            <p class="interest-card__description">
+                                Gaming is another passion of mine, though I have much less time to do it now! I enjoy
+                                adventure games with rich and detailed worlds to explore.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="image-card floating">
+                        <img src="./images/interests/washing-line.jpg" alt="Drops of water on a washing line at dusk.">
+                    </div>
+                </div>
+                <!-- <div class="flex-line-break"></div> -->
+                <a class="button button-primary" href="./work.html">View my projects</a>
+            </div>
+        </section>
+    </main>
+    <!-- Footer component -->
+    <footer>
+        <div id="footer-inner">
+            <div id="footer-inner__sitemap" class="column">
+                <ul id="sitemap">
+                    <li>
+                        <h2 class="footer-heading">
+                            Sitemap
+                        </h2>
+                    </li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./work.html">Work</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div id="footer-inner__social" class="column">
+                <div id="footer-inner__follow">
+                    <h2 class="footer-heading">Follow me</h2>
+                    <!-- Social Icons Widget component -->
+                    <div class="social-icons-widget">
+                        <ul class="social-icons-widget__list">
+                            <li class="social-icons-widget__list-item">
+                                <a class="social-icon__github" href="https://github.com/kobbyasomani"
+                                    target="_blank"><img src="./images/icons/light/github-brands-light.svg"
+                                        alt="GitHub icon"></a>
+                            </li>
+                            <li class="social-icons-widget__list-item">
+                                <a class="social-icon__linkedin" href="https://www.linkedin.com/in/kobbyasomani/"
+                                    target="_blank"><img src="./images/icons/light/linkedin-brands-light.svg"
+                                        alt="LinkedIn icon"></a>
+                            </li>
+                            <li class="social-icons-widget__list-item">
+                                <a class="social-icon__twitter" href="https://twitter.com/kobbyasomani"
+                                    target="_blank"><img src="./images/icons/light/twitter-brands-light.svg"
+                                        alt="Twitter icon"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="footer-inner__contact">
+                    <a id="mail" class="button" href="./contact.html"><span class="mail__icon"></span>Say hi!</a>
+                </div>
+            </div>
+            <span id="copyright">© 2022 Kwabena Asomani</span>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./functions.js"></script>
+</body>
+
+</html>

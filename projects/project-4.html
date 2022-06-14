@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kobby Asomani | Full Stack Web Developer</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- Main naviagtion menu component -->
+        <nav id="nav-main">
+            <div class="row">
+                <span id="logo"><a href="./">KA</a></span>
+                <ul id="nav-main__links">
+                    <li id="nav-main__home" class="nav-main__menu-item"><a href="../">Home</a></li>
+                    <li id="nav-main__about" class="nav-main__menu-item"><a href="../about.html">About</a></li>
+                    <li id="nav-main__work" class="nav-main__menu-item"><a href="../work.html">Work</a></li>
+                    <li id="nav-main__blog" class="nav-main__menu-item"><a href="../blog.html">Blog</a></li>
+                    <li id="nav-main__contact" class="nav-main__menu-item"><a href="../contact.html">Contact</a></li>
+                    <li id="nav-main__mobile-open">
+                        <button id="nav-main__mobile-open-button">
+                            <img src="../images/icons/dark/bars-solid.svg" alt="Open the full-screen navigation menu">
+                        </button>
+                    </li>
+                </ul>
+                <button id="nav-main__mobile-close"><img src="../images/icons/dark/xmark-solid.svg"
+                        alt="Close the full-screen navigation menu"></button>
+            </div>
+        </nav>
+    </header>
+    <!-- Overlay for full-screen maenu mode -->
+    <div id="nav-main__mobile-overlay"></div>
+    <main id="main-project-1">
+        <article id="project">
+            <!--Blog Post Header -->
+            <header class="project__header">
+                <div class="row">
+                    <div class="column">
+                        <h1 class="project__heading">Sample Project 1</h1>
+                        <span class="project__subheading">A project of type x made for purpose y using tech a, tech b,
+                            and tech c.</span>
+                    </div>
+                </div>
+            </header>
+            <!-- Blog Post Content -->
+            <section>
+                <div class="row">
+                    <div class="column">
+                        <div class="project__featured-image">
+                            <img class="image-card" src="../images/placeholder/desk-blurry.jpg"
+                                alt="A blurry photo of a computer desk.">
+                        </div>
+                        <p class="project__intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                            laboriosam commodi facere modi
+                            necessitatibus ipsam aliquam velit ipsa inventore consectetur illo officiis dolore, voluptas
+                            unde recusandae vero. In, dolore voluptatibus.</p>
+
+                        <h2 class="project__heading">About the project</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, facilis nam. Assumenda dolores
+                            distinctio itaque corporis quaerat veniam dolore quos magnam dolorem esse doloribus eligendi
+                            explicabo, consequatur laborum ut tenetur?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quis eum asperiores
+                            obcaecati, eligendi voluptatibus dicta iste iure quas. Incidunt cupiditate aliquid, eius
+                            recusandae quaerat totam temporibus ad nihil repellat.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda dolor expedita deleniti
+                            deserunt veniam possimus necessitatibus? Expedita similique, provident dicta libero
+                            pariatur, earum modi doloremque corporis voluptatibus, perferendis harum nam! Libero, error
+                            omnis dolorum delectus exercitationem, ipsa facere provident voluptatem sint repellendus
+                            doloremque nobis modi voluptatibus blanditiis porro sit dolores. Assumenda ad porro minima
+                            ab voluptas rerum illo, molestias sed. Temporibus, tempore earum! Praesentium labore earum
+                            ullam id ea impedit voluptate nesciunt animi quaerat. Possimus, id! Eius veniam ducimus modi
+                            excepturi ullam iusto exercitationem assumenda, numquam voluptates. Vero non dicta
+                            consectetur minus sint atque, provident sit. Ipsam maxime placeat quaerat?</p>
+                        <h2 class="project__heading">Project section heading 2</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio velit cupiditate qui nemo quas
+                            amet eius libero non blanditiis magni, sapiente aliquid itaque placeat. Reprehenderit
+                            impedit autem neque, totam delectus pariatur velit iste minus culpa maiores, officiis eius
+                            sunt voluptatem nostrum voluptas nobis! Sed libero est itaque aliquid minus alias tempore ad
+                            cupiditate qui corporis, beatae aspernatur iste assumenda error nisi, dolores laudantium
+                            sunt atque. Ea blanditiis est fugit alias eligendi mollitia, impedit ducimus. Fuga a dolore,
+                            labore sed esse hic impedit provident odit possimus ipsum. Nemo quod laborum odio sed odit,
+                            optio perferendis explicabo?</p>
+                    </div>
+                </div>
+                <div id="contributors" class="row">
+                    <div class="column">
+                        <!-- Project Links (individual project page) component -->
+                        <div class="project-links">
+                            <a class="project-link__link" href="https://kobbyasomani.github.io/" target="_blank">
+                                <img class="project-link__icon" src="../images/icons/dark/link-solid.svg"
+                                    alt="LinkedIn icon">
+                                <span class="project-link__text">Visit the live site</span>
+                            </a>
+                            <a class="project-link__link" href="https://github.com/kobbyasomani/kobbyasomani.github.io"
+                                target="_blank">
+                                <img class="project-link__icon" src="../images/icons/dark/github-brands.svg"
+                                    alt="GitHub icon">
+                                <span class="project-link__text">View this project on GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <!-- Contributors component -->
+                        <div class="project-contributors-card">
+                            <h2 class="project-contributors-card__heading">Contributors</h2>
+                            <ul class="project-contributors-card__list">
+                                <li class="project-contributors-card__list-item">
+                                    Contributor 1 — Project Role
+                                </li>
+                                <li class="project-contributors-card__list-item">
+                                    Contributor 2 — Project Role
+                                </li>
+                                <li class="project-contributors-card__list-item">
+                                    Contributor 3 — Project Role
+                                </li>
+                                <li class="project-contributors-card__list-item">
+                                    Contributor 4 — Project Role
+                                </li>
+                                <li class="project-contributors-card__list-item">
+                                    Contributor 5 — Project Role
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="divider-100"></div>
+                </div>
+            </section>
+        </article>
+        <div class="row">
+            <h2 class="project__heading-related-posts">Other Projects</h2>
+            <div class="project__related">
+                <!-- Project 2 -->
+                <div class="column">
+                    <article class="project-summary-card">
+                        <div class="project-summary-card__image"><a href="../projects/project-2.html"><img
+                                    class="image-card" src="../images/placeholder/keyboard.jpg"
+                                    alt="Closeup of a keyboard with the caps lock key glowing.">
+                            </a>
+                        </div>
+                        <div class="project-summary-card__body">
+                            <h3 class="project-summary-card__title">
+                                <a href="../projects/project-2.html">Project 2</a>
+                            </h3>
+                            <p class="project-summary-card__description">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum doloremque
+                                voluptatibus
+                                amet
+                                ut.
+                            </p>
+                            <div class="project-summary-card__footer">
+                                <a class="project-summary-card__link" href="../projects/project-2.html">View project
+                                    details</a>
+                                <div class="project-summary-card__ext-links">
+                                    <a class="project-summary-card__icon-link" href="https://kobbyasomani.github.io/"
+                                        target="
+                                    -blank">
+                                        <img src="../images/icons/dark/link-solid.svg"
+                                            alt="Visit the live project site">
+                                    </a>
+                                    <a class="project-summary-card__icon-github"
+                                        href="https://github.com/kobbyasomani/kobbyasomani.github.io" target="
+                                    -blank">
+                                        <img src="../images/icons/dark/github-brands.svg"
+                                            alt="View this project on GitHub">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Project 3 -->
+                <div class="column">
+                    <article class="project-summary-card">
+                        <div class="project-summary-card__image">
+                            <a href="../projects/project-3.html">
+                                <img class="image-card" src="../images/placeholder/headphones.jpg"
+                                    alt="A pair of headphones on a desk.">
+                            </a>
+                        </div>
+                        <div class="project-summary-card__body">
+                            <h3 class="project-summary-card__title">
+                                <a href="../projects/project-3.html">Project 3</a>
+                            </h3>
+                            <p class="project-summary-card__description">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum doloremque
+                                voluptatibus
+                                amet
+                                ut.
+                            </p>
+                            <div class="project-summary-card__footer">
+                                <a class="project-summary-card__link" href="../projects/project-3.html">View project
+                                    details</a>
+                                <div class="project-summary-card__ext-links">
+                                    <a class="project-summary-card__icon-link" href="https://kobbyasomani.github.io/"
+                                        target="
+                                    -blank">
+                                        <img src="../images/icons/dark/link-solid.svg"
+                                            alt="Visit the live project site">
+                                    </a>
+                                    <a class="project-summary-card__icon-github"
+                                        href="https://github.com/kobbyasomani/kobbyasomani.github.io" target="
+                                    -blank">
+                                        <img src="../images/icons/dark/github-brands.svg"
+                                            alt="View this project on GitHub">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="flex-line-break"></div>
+                <a class="button button-primary" href="../work.html">View all projects</a>
+            </div>
+        </div>
+    </main>
+    <!-- Footer component -->
+    <footer>
+        <div id="footer-inner">
+            <div id="footer-inner__sitemap" class="column">
+                <ul id="sitemap">
+                    <li>
+                        <h2 class="footer-heading">
+                            Sitemap
+                        </h2>
+                    </li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../work.html">Work</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div id="footer-inner__social" class="column">
+                <div id="footer-inner__follow">
+                    <h2 class="footer-heading">Follow me</h2>
+                    <!-- Social Icons Widget component -->
+                    <div class="social-icons-widget">
+                        <ul class="social-icons-widget__list">
+                            <li class="social-icons-widget__list-item">
+                                <a class="social-icon__github" href="https://github.com/kobbyasomani"
+                                    target="_blank"><img src="../images/icons/light/github-brands-light.svg"
+                                        alt="GitHub icon"></a>
+                            </li>
+                            <li class="social-icons-widget__list-item">
+                                <a class="social-icon__linkedin" href="https://www.linkedin.com/in/kobbyasomani/"
+                                    target="_blank"><img src="../images/icons/light/linkedin-brands-light.svg"
+                                        alt="LinkedIn icon"></a>
+                            </li>
+                            <li class="social-icons-widget__list-item">
+                                <a class="social-icon__twitter" href="https://twitter.com/kobbyasomani"
+                                    target="_blank"><img src="../images/icons/light/twitter-brands-light.svg"
+                                        alt="Twitter icon"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="footer-inner__contact">
+                    <a id="mail" class="button" href="../contact.html"><span class="mail__icon"></span>Say hi!</a>
+                </div>
+            </div>
+            <span id="copyright">© 2022 Kwabena Asomani</span>
+        </div>
+    </footer>
+
+    <script src="../functions.js"></script>
+</body>
+
+</html>

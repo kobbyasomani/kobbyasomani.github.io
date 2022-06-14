@@ -1,0 +1,121 @@
+@use "../base";
+
+/* About Page */
+// Fix the width of the portrait image and hide it on small dispalys
+#portrait-about {
+    max-width: 200px;
+    border-radius: 50%;
+    display: none;
+}
+
+// Set column for floating card, which will be absolutely positioned
+#gaming {
+    position: relative;
+}
+
+// Hide floating card on small displays
+.image-card.floating {
+    display: none;
+}
+
+/* RESPONSIVE STYLES */
+// Medium >= 768px
+@media screen and (min-width: 768px) {
+    //Display portrait image
+    #portrait-about {
+        display: flex;
+    }
+
+    // Display floating image card
+    .image-card.floating {
+        display: flex;
+        width: auto;
+
+        // Make sure image covers card entirely
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// Large >= 1100px
+@media screen and (min-width: 1100px) {
+    #interests {
+        &>.row {
+
+            h2 {
+                margin-bottom: 1em;
+            }
+
+            .column {
+                flex-basis: 100%;
+                // Change Interest Cards to a horizontal layout
+                .interest-card {
+                    @include base.card-horizontal();
+
+                    .interest-card__image {
+                        position: relative;
+                        right: 1em;
+                    }
+
+                    margin-bottom: -2em;
+                    margin-top: -2em;
+                }
+
+                // Style Interest Cards in an alternating row/row-reverse pattern
+                &:nth-of-type(odd) {
+                    .interest-card {
+                        flex-direction: row-reverse;
+
+                        .interest-card__image {
+                            position: relative;
+                            left: 1em;
+                        }
+
+                        margin-top: -2em;
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Absolutely position the floating Image Card
+        .image-card.floating {
+            position: absolute;
+            bottom: 25em;
+            left: 31em;
+            max-width: 600px;
+        }
+
+        // Style text to display on top of floating image
+        #art {
+
+            p,
+            h3 {
+                z-index: 2;
+                color: base.$neutral-very-light;
+            }
+        }
+
+        // Add extra spacing for the button
+        .button {
+            margin-top: 3em;
+        }
+    }
+}
+
+// Largest possible width for website
+@media screen and (min-width: 1200px) {
+    #interests {
+        // Slightly adjust floating image card positioning
+        .image-card.floating {
+            left: 34em;
+            width: 800px;
+        }
+    }
+}

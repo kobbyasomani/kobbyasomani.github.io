@@ -1,0 +1,81 @@
+@use "../base";
+
+main[id*="main-blog-post"] {
+    // Display the main section on project pages as a block
+    &:not(main[class*="mobile-mode"]) { // Prevent showing on mobile mode
+    display: block;
+    }
+
+    #blog-post {
+        background-color: base.$neutral-very-light;
+        padding-top: 0;
+        @include base.center();
+
+        .row {
+            justify-content: flex-start;
+
+            .column {
+                align-items: flex-start;
+            }
+        }
+
+        p {
+            max-width: 100%;
+            justify-self: flex-start;
+
+            &:last-of-type {
+                padding-bottom: 2em;
+                border-bottom: .2em solid base.$neutral-light;
+            }
+        }
+    }
+
+    .blog-post__header {
+        padding-bottom: 1em;
+    }
+
+    section {
+        &:nth-of-type(1) {
+            padding-top: 0;
+            padding-bottom: 1em;
+        }
+    }
+
+    h2 {
+        margin-top: .5em;
+    }
+
+    .blog-post__heading-related-posts {
+        @include base.center();
+        padding-top: 0;
+    }
+
+    .blog-post__related {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 2.5em;
+
+        .column {
+            flex-basis: 50%;
+
+            .blog-summary-card {
+                padding-bottom: 1em;
+            }
+        }
+    }
+
+    .blog-post__date {
+        color: base.$neutral-medium;
+    }
+}
+
+// Stack related post columns when screen is too small
+@media screen and (max-width: 550px) {
+    #main-blog-post-1 {
+        .blog-post__related {
+            .column {
+                flex-basis: 100%;
+            }
+        }
+    }
+}

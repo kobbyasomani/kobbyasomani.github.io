@@ -89,12 +89,14 @@
                 flex-direction: column;
                 justify-content: center;
                 margin-top: 65px;
+                margin-bottom: 165px;
                 left: 0;
                 top: 0;
                 width: 100%;
                 height: calc(100vh - 230px);
                 text-align: center;
-                font-size: 13vw;
+                font-size: clamp(16px, 13vw, 5vh);
+                overflow-y: scroll;
 
                 #nav-main__mobile-open {
                     display: none;

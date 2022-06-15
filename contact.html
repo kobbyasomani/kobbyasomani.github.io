@@ -14,142 +14,149 @@
 </head>
 
 <body>
-    <header>
-        <!-- Main naviagtion menu component -->
-        <nav id="nav-main">
-            <div class="row">
-                <span id="logo"><a href="./">KA</a></span>
-                <ul id="nav-main__links">
-                    <li id="nav-main__home" class="nav-main__menu-item"><a href="./">Home</a></li>
-                    <li id="nav-main__about" class="nav-main__menu-item"><a href="./about.html">About</a></li>
-                    <li id="nav-main__work" class="nav-main__menu-item"><a href="./work.html">Work</a></li>
-                    <li id="nav-main__blog" class="nav-main__menu-item"><a href="./blog.html">Blog</a></li>
-                    <li id="nav-main__contact" class="nav-main__menu-item"><a class="active"
-                            href="./contact.html">Contact</a></li>
-                    <li id="nav-main__mobile-open">
-                        <button id="nav-main__mobile-open-button">
-                            <img src="./images/icons/dark/bars-solid.svg" alt="Open the full-screen navigation menu">
-                        </button>
-                    </li>
-                </ul>
-                <button id="nav-main__mobile-close"><img src="./images/icons/dark/xmark-solid.svg"
-                        alt="Close the full-screen navigation menu"></button>
-            </div>
-        </nav>
-    </header>
-    <!-- Overlay for full-screen maenu mode -->
-    <div id="nav-main__mobile-overlay"></div>
-    <main id="main-contact">
-        <div id="bg-image-container-1"> <img id="bg-image-blue-brace" src="./images/background/open-brace-blue.svg" alt="">
+    <div id="wrapper">
+        <!-- Background graphics -->
+        <div id="bg-image-container-1"> <img id="bg-image-blue-brace" src="./images/background/open-brace-blue.svg"
+                alt="">
         </div>
-        <div id="bg-image-container-2"> <img id="bg-image-green-tag" src="./images/background/opening-tag-green.svg" alt="">
+        <div id="bg-image-container-2"> <img id="bg-image-green-tag" src="./images/background/opening-tag-green.svg"
+                alt="">
         </div>
-        <!-- Section Header -->
-        <section class="section-header">
-            <div class="row">
-                <div class="column">
-                    <h1>Contact</h1>
-                    <p>Reach out if you're looking for a full-stack web developer to do some custom work or collaborate
-                        with. </p>
+        <header>
+            <!-- Main naviagtion menu component -->
+            <nav id="nav-main">
+                <div class="row">
+                    <span id="logo"><a href="./">KA</a></span>
+                    <ul id="nav-main__links">
+                        <li id="nav-main__home" class="nav-main__menu-item"><a href="./">Home</a></li>
+                        <li id="nav-main__about" class="nav-main__menu-item"><a href="./about.html">About</a></li>
+                        <li id="nav-main__work" class="nav-main__menu-item"><a href="./work.html">Work</a></li>
+                        <li id="nav-main__blog" class="nav-main__menu-item"><a href="./blog.html">Blog</a></li>
+                        <li id="nav-main__contact" class="nav-main__menu-item"><a class="active"
+                                href="./contact.html">Contact</a></li>
+                        <li id="nav-main__mobile-open">
+                            <button id="nav-main__mobile-open-button">
+                                <img src="./images/icons/dark/bars-solid.svg"
+                                    alt="Open the full-screen navigation menu">
+                            </button>
+                        </li>
+                    </ul>
+                    <button id="nav-main__mobile-close"><img src="./images/icons/dark/xmark-solid.svg"
+                            alt="Close the full-screen navigation menu"></button>
                 </div>
-            </div>
-            <div class="row">
-                <div class="column">
-                    <!-- Professional Account Links component -->
-                    <div class="account-links">
-                        <a class="account-link__link" href="https://www.linkedin.com/in/kobbyasomani/" target="_blank">
-                            <img class="account-link__icon" src="./images/icons/dark/linkedin-brands.svg"
-                                alt="LinkedIn icon">
-                            <span class="account-link__text">Reach out on LinkedIn</span>
-                        </a>
-                        <a class="account-link__link" href="https://github.com/kobbyasomani" target="_blank">
-                            <img class="account-link__icon" src="./images/icons/dark/github-brands.svg"
-                                alt="GitHub icon">
-                            <span class="account-link__text">Follow my projects on GitHub</span>
-                        </a>
+            </nav>
+        </header>
+        <!-- Overlay for full-screen menu mode -->
+        <div id="nav-main__mobile-overlay"></div>
+        <main id="main-contact">
+            <!-- Section Header -->
+            <section class="section-header">
+                <div class="row">
+                    <div class="column">
+                        <h1>Contact</h1>
+                        <p>Reach out if you're looking for a full-stack web developer to do some custom work or
+                            collaborate
+                            with. </p>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Work -->
-        <section id="section-contact-form">
-            <div class="row">
-                <h2>Send me a message</h2>
-                <!-- Contact Form component -->
-                <form id="form-contact">
-                    <!-- Name -->
-                    <label for="name">*Name (required):</label>
-                    <input id="name" name="name" type="text" autocomplete="name" required
-                        placeholder="First and last name">
-                    <!-- Email address -->
-                    <label for="email">*Email address (required):</label>
-                    <input id="email" name="email" type="email" autocomplete="email" required
-                        placeholder="you@emailprovider.com">
-                    <!-- Phone number -->
-                    <label for="phone">Phone Number:</label>
-                    <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+(61) 1234 567 890">
-                    <!-- Message -->
-                    <label for="message">*Message (required):</label>
-                    <textarea id="message" name="message" placeholder="Enter your message here..."></textarea>
-                    <input type="submit" name="submit" class="button button-primary">
-                </form>
-                <p>
-                    Thanks for getting in touch! I'll try to get back to you as soon as possible.
-                </p>
-                <div class="flex-line-break"></div>
-                <a class="button button-secondary" href="./work.html">Browse my portfolio</a>
-            </div>
-        </section>
-    </main>
-    <!-- Footer component -->
-    <footer>
-        <div id="footer-inner">
-            <div id="footer-inner__sitemap" class="column">
-                <ul id="sitemap">
-                    <li>
-                        <h2 class="footer-heading">
-                            Sitemap
-                        </h2>
-                    </li>
-                    <li><a href="./">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./work.html">Work</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div id="footer-inner__social" class="column">
-                <div id="footer-inner__follow">
-                    <h2 class="footer-heading">Follow me</h2>
-                    <!-- Social Icons Widget component -->
-                    <div class="social-icons-widget">
-                        <ul class="social-icons-widget__list">
-                            <li class="social-icons-widget__list-item">
-                                <a class="social-icon__github" href="https://github.com/kobbyasomani"
-                                    target="_blank"><img src="./images/icons/light/github-brands-light.svg"
-                                        alt="GitHub icon"></a>
-                            </li>
-                            <li class="social-icons-widget__list-item">
-                                <a class="social-icon__linkedin" href="https://www.linkedin.com/in/kobbyasomani/"
-                                    target="_blank"><img src="./images/icons/light/linkedin-brands-light.svg"
-                                        alt="LinkedIn icon"></a>
-                            </li>
-                            <li class="social-icons-widget__list-item">
-                                <a class="social-icon__twitter" href="https://twitter.com/kobbyasomani"
-                                    target="_blank"><img src="./images/icons/light/twitter-brands-light.svg"
-                                        alt="Twitter icon"></a>
-                            </li>
-                        </ul>
+                <div class="row">
+                    <div class="column">
+                        <!-- Professional Account Links component -->
+                        <div class="account-links">
+                            <a class="account-link__link" href="https://www.linkedin.com/in/kobbyasomani/"
+                                target="_blank">
+                                <img class="account-link__icon" src="./images/icons/dark/linkedin-brands.svg"
+                                    alt="LinkedIn icon">
+                                <span class="account-link__text">Reach out on LinkedIn</span>
+                            </a>
+                            <a class="account-link__link" href="https://github.com/kobbyasomani" target="_blank">
+                                <img class="account-link__icon" src="./images/icons/dark/github-brands.svg"
+                                    alt="GitHub icon">
+                                <span class="account-link__text">Follow my projects on GitHub</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div id="footer-inner__contact">
-                    <a id="mail" class="button" href="./contact.html"><span class="mail__icon"></span>Say hi!</a>
+            </section>
+            <!-- Work -->
+            <section id="section-contact-form">
+                <div class="row">
+                    <h2>Send me a message</h2>
+                    <!-- Contact Form component -->
+                    <form id="form-contact">
+                        <!-- Name -->
+                        <label for="name">*Name (required):</label>
+                        <input id="name" name="name" type="text" autocomplete="name" required
+                            placeholder="First and last name">
+                        <!-- Email address -->
+                        <label for="email">*Email address (required):</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required
+                            placeholder="you@emailprovider.com">
+                        <!-- Phone number -->
+                        <label for="phone">Phone Number:</label>
+                        <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+(61) 1234 567 890">
+                        <!-- Message -->
+                        <label for="message">*Message (required):</label>
+                        <textarea id="message" name="message" placeholder="Enter your message here..."></textarea>
+                        <input type="submit" name="submit" class="button button-primary">
+                    </form>
+                    <p>
+                        Thanks for getting in touch! I'll try to get back to you as soon as possible.
+                    </p>
+                    <div class="flex-line-break"></div>
+                    <a class="button button-secondary" href="./work.html">Browse my portfolio</a>
                 </div>
+            </section>
+        </main>
+        <!-- Footer component -->
+        <footer>
+            <div id="footer-inner">
+                <div id="footer-inner__sitemap" class="column">
+                    <ul id="sitemap">
+                        <li>
+                            <h2 class="footer-heading">
+                                Sitemap
+                            </h2>
+                        </li>
+                        <li><a href="./">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./work.html">Work</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div id="footer-inner__social" class="column">
+                    <div id="footer-inner__follow">
+                        <h2 class="footer-heading">Follow me</h2>
+                        <!-- Social Icons Widget component -->
+                        <div class="social-icons-widget">
+                            <ul class="social-icons-widget__list">
+                                <li class="social-icons-widget__list-item">
+                                    <a class="social-icon__github" href="https://github.com/kobbyasomani"
+                                        target="_blank"><img src="./images/icons/light/github-brands-light.svg"
+                                            alt="GitHub icon"></a>
+                                </li>
+                                <li class="social-icons-widget__list-item">
+                                    <a class="social-icon__linkedin" href="https://www.linkedin.com/in/kobbyasomani/"
+                                        target="_blank"><img src="./images/icons/light/linkedin-brands-light.svg"
+                                            alt="LinkedIn icon"></a>
+                                </li>
+                                <li class="social-icons-widget__list-item">
+                                    <a class="social-icon__twitter" href="https://twitter.com/kobbyasomani"
+                                        target="_blank"><img src="./images/icons/light/twitter-brands-light.svg"
+                                            alt="Twitter icon"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="footer-inner__contact">
+                        <a id="mail" class="button" href="./contact.html"><span class="mail__icon"></span>Say hi!</a>
+                    </div>
+                </div>
+                <span id="copyright">© 2022 Kwabena Asomani</span>
             </div>
-            <span id="copyright">© 2022 Kwabena Asomani</span>
-        </div>
-    </footer>
-
+        </footer>
+    </div>
     <!-- Scripts -->
     <script src="functions.js"></script>
 </body>

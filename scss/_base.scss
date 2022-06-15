@@ -218,9 +218,9 @@ $transition-short: all .3s ease-in-out;
 }
 
 // Mixin - Background Image
+// Relatively position bg images for animation
 @mixin bg-image {
-    position: absolute;
-    z-index: -1;
+    position: relative;
 }
 
 /* Style Resets and Defaults */
@@ -238,14 +238,15 @@ html {
 }
 
 // Set the body to always fill the viewport even if content is shorter
-body,
-main {
+body {
     min-height: calc(100vh - 251.5px);
-    position: relative;
 }
 
-main {
-    overflow: clip;
+#wrapper {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 // Generic styling for links in the page body

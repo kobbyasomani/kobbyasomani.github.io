@@ -11,14 +11,15 @@ html {
   font-size: clamp(17px, 18px, 10vw);
 }
 
-body,
-main {
+body {
   min-height: calc(100vh - 251.5px);
-  position: relative;
 }
 
-main {
-  overflow: clip;
+#wrapper {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 main {
@@ -179,16 +180,22 @@ a[class*=icon]:hover, a[class*=icon]:focus,
 /* Animated Background Images */
 *[id*=bg-image-container] {
   position: absolute;
+  z-index: -1;
 }
 
 /* Blue Brace */
 #bg-image-container-1 {
   top: 58px;
-  right: 22vw;
+  right: 10vw;
 }
-#bg-image-container-1 #bg-image-blue-brace {
-  position: absolute;
-  z-index: -1;
+@media screen and (max-width: 768px) {
+  #bg-image-container-1 {
+    right: -10vw;
+  }
+}
+
+#bg-image-blue-brace {
+  position: relative;
   height: 37em;
   opacity: 25%;
   transform: rotateZ(30deg) translateY(0);
@@ -228,9 +235,9 @@ a[class*=icon]:hover, a[class*=icon]:focus,
   top: 80px;
   left: 32vw;
 }
-#bg-image-container-2 #bg-image-green-tag {
-  position: absolute;
-  z-index: -1;
+
+#bg-image-green-tag {
+  position: relative;
   height: 5em;
   opacity: 25%;
   animation-duration: 3.5s;
@@ -266,12 +273,12 @@ a[class*=icon]:hover, a[class*=icon]:focus,
 
 /* Red Closing Tag */
 #bg-image-container-3 {
-  bottom: 480px;
-  right: 22vw;
+  bottom: 580px;
+  right: 10vw;
 }
-#bg-image-container-3 #bg-image-red-tag {
-  position: absolute;
-  z-index: -1;
+
+#bg-image-red-tag {
+  position: relative;
   height: 8em;
   opacity: 50%;
   animation-duration: 6s;
@@ -307,12 +314,12 @@ a[class*=icon]:hover, a[class*=icon]:focus,
 
 /* Yellow Bracket */
 #bg-image-container-4 {
-  bottom: 500px;
-  left: 17vw;
+  bottom: 200px;
+  left: 6vw;
 }
-#bg-image-container-4 #bg-image-yellow-bracket {
-  position: absolute;
-  z-index: -1;
+
+#bg-image-yellow-bracket {
+  position: relative;
   height: 30em;
   opacity: 30%;
   transform: rotateZ(-26deg);
@@ -423,12 +430,14 @@ a[class*=icon]:hover, a[class*=icon]:focus,
     flex-direction: column;
     justify-content: center;
     margin-top: 65px;
+    margin-bottom: 165px;
     left: 0;
     top: 0;
     width: 100%;
     height: calc(100vh - 230px);
     text-align: center;
-    font-size: 13vw;
+    font-size: clamp(16px, 13vw, 5vh);
+    overflow-y: scroll;
   }
   #nav-main.mobile-mode #nav-main__links #nav-main__mobile-open {
     display: none;

@@ -80,76 +80,82 @@ a[class*="icon"],
 }
 
 /* Animated Background Images */
+// Absolutely position background image containers for manual placement
 *[id*="bg-image-container"] {
     position: absolute;
+    z-index: -1;
 }
 
 /* Blue Brace */
 #bg-image-container-1 {
     top: 58px;
-    right: 22vw;
+    right: 10vw;
 
-    #bg-image-blue-brace {
-        @include base.bg-image();
-        @include animate__bg-image-hover;
-        height: 37em;
-        opacity: 25%;
-        transform: rotateZ(30deg) translateY(0);
-        animation-duration: 7s;
-        animation-name: bg-image-hover-1;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
+    @media screen and (max-width: 768px) {
+        right: -10vw;
     }
+}
+
+#bg-image-blue-brace {
+    @include base.bg-image();
+    @include animate__bg-image-hover;
+    height: 37em;
+    opacity: 25%;
+    transform: rotateZ(30deg) translateY(0);
+    animation-duration: 7s;
+    animation-name: bg-image-hover-1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 /* Green opening tag */
 #bg-image-container-2 {
     top: 80px;
     left: 32vw;
+}
 
-    #bg-image-green-tag {
-        @include base.bg-image();
-        @include animate__bg-image-hover();
-        height: 5em;
-        opacity: 25%;
-        animation-duration: 3.5s;
-        animation-name: bg-image-hover-2;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-    }
+#bg-image-green-tag {
+    @include base.bg-image();
+    @include animate__bg-image-hover();
+    height: 5em;
+    opacity: 25%;
+    animation-duration: 3.5s;
+    animation-name: bg-image-hover-2;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 /* Red Closing Tag */
 #bg-image-container-3 {
-    bottom: 480px;
-    right: 22vw;
+    bottom: 580px;
+    right: 10vw;
+}
 
-    #bg-image-red-tag {
-        @include base.bg-image();
-        @include animate__bg-image-hover();
-        height: 8em;
-        opacity: 50%;
-        animation-duration: 6s;
-        animation-name: bg-image-hover-2;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-    }
+#bg-image-red-tag {
+    @include base.bg-image();
+    @include animate__bg-image-hover();
+    height: 8em;
+    opacity: 50%;
+    animation-duration: 6s;
+    animation-name: bg-image-hover-2;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 /* Yellow Bracket */
 #bg-image-container-4 {
-    bottom: 500px;
-    left: 17vw;
+    bottom: 200px;
+    left: 6vw;
+}
 
-    #bg-image-yellow-bracket {
-        @include base.bg-image();
-        @include animate__bg-image-hover();
-        height: 30em;
-        opacity: 30%;
-        transform: rotateZ(-26deg);
-        animation-duration: 6s;
-        animation-name: bg-image-hover-1;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-    }
+#bg-image-yellow-bracket {
+    @include base.bg-image();
+    @include animate__bg-image-hover();
+    height: 30em;
+    opacity: 30%;
+    transform: rotateZ(-26deg);
+    animation-duration: 6s;
+    animation-name: bg-image-hover-1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }

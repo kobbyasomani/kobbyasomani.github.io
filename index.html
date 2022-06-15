@@ -14,452 +14,482 @@
 </head>
 
 <body>
-    <header>
-        <!-- Main naviagtion menu component -->
-        <nav id="nav-main">
-            <div class="row">
-                <span id="logo"><a href="./">KA</a></span>
-                <ul id="nav-main__links">
-                    <li id="nav-main__home" class="nav-main__menu-item"><a class="active" href="./">Home</a></li>
-                    <li id="nav-main__about" class="nav-main__menu-item"><a href="./about.html">About</a></li>
-                    <li id="nav-main__work" class="nav-main__menu-item"><a href="./work.html">Work</a></li>
-                    <li id="nav-main__blog" class="nav-main__menu-item"><a href="./blog.html">Blog</a></li>
-                    <li id="nav-main__contact" class="nav-main__menu-item"><a href="./contact.html">Contact</a></li>
-                    <li id="nav-main__mobile-open">
-                        <button id="nav-main__mobile-open-button">
-                            <img src="./images/icons/dark/bars-solid.svg" alt="Open the full-screen navigation menu">
-                        </button>
-                    </li>
-                </ul>
-                <button id="nav-main__mobile-close"><img src="./images/icons/dark/xmark-solid.svg"
-                        alt="Close the full-screen navigation menu"></button>
-            </div>
-        </nav>
-    </header>
-    <!-- Overlay for full-screen maenu mode -->
-    <div id="nav-main__mobile-overlay"></div>
-    <main id="main-home">
-        <div id="bg-image-container-1"> <img id="bg-image-blue-brace" src="./images/background/open-brace-blue.svg" alt=""></div>
-        <div id="bg-image-container-2"> <img id="bg-image-green-tag" src="./images/background/opening-tag-green.svg" alt=""></div>
-        <div id="bg-image-container-3"> <img id="bg-image-red-tag" src="./images/background/closing-tag-red.svg" alt=""></div>
-        <div id="bg-image-container-4"> <img id="bg-image-yellow-bracket" src="./images/background/open-bracket-yellow.svg" alt=""></div>
-
-        <!-- Introduction -->
-        <section id="section-home-intro">
-            <div class="row">
-                <header class="section-header">
-                    <h1>Hello!<br>
-                        I'm Kobby Asomani,<br>a full-stack web developer.</h1>
-                </header>
-                <div id="portrait" class="column">
-                    <div id="portrait__image" class="image-card">
-                        <img src="./images/kobby-portrait-closeup-512px.jpg"
-                            alt="A portrait of web developer Kobby Asomani.">
+    <div id="wrapper">
+        <!-- Background graphics -->
+        <div id="bg-image-container-1"> <img id="bg-image-blue-brace" src="./images/background/open-brace-blue.svg"
+                alt=""></div>
+        <div id="bg-image-container-2"> <img id="bg-image-green-tag" src="./images/background/opening-tag-green.svg"
+                alt=""></div>
+        <div id="bg-image-container-3"> <img id="bg-image-red-tag" src="./images/background/closing-tag-red.svg" alt="">
+        </div>
+        <div id="bg-image-container-4"> <img id="bg-image-yellow-bracket"
+                src="./images/background/open-bracket-yellow.svg" alt=""></div>
+        <header>
+            <!-- Main naviagtion menu component -->
+            <nav id="nav-main">
+                <div class="row">
+                    <span id="logo"><a href="./">KA</a></span>
+                    <ul id="nav-main__links">
+                        <li id="nav-main__home" class="nav-main__menu-item"><a class="active" href="./">Home</a></li>
+                        <li id="nav-main__about" class="nav-main__menu-item"><a href="./about.html">About</a></li>
+                        <li id="nav-main__work" class="nav-main__menu-item"><a href="./work.html">Work</a></li>
+                        <li id="nav-main__blog" class="nav-main__menu-item"><a href="./blog.html">Blog</a></li>
+                        <li id="nav-main__contact" class="nav-main__menu-item"><a href="./contact.html">Contact</a></li>
+                        <li id="nav-main__mobile-open">
+                            <button id="nav-main__mobile-open-button">
+                                <img src="./images/icons/dark/bars-solid.svg"
+                                    alt="Open the full-screen navigation menu">
+                            </button>
+                        </li>
+                    </ul>
+                    <button id="nav-main__mobile-close"><img src="./images/icons/dark/xmark-solid.svg"
+                            alt="Close the full-screen navigation menu"></button>
+                </div>
+            </nav>
+        </header>
+        <!-- Overlay for full-screen menu mode -->
+        <div id="nav-main__mobile-overlay"></div>
+        <main id="main-home">
+            <!-- Introduction -->
+            <section id="section-home-intro">
+                <div class="row">
+                    <header class="section-header">
+                        <h1>Hello!<br>
+                            I'm Kobby Asomani,<br>a full-stack web developer.</h1>
+                    </header>
+                    <div id="portrait" class="column">
+                        <div id="portrait__image" class="image-card">
+                            <img src="./images/kobby-portrait-closeup-512px.jpg"
+                                alt="A portrait of web developer Kobby Asomani.">
+                        </div>
+                    </div>
+                    <div id="toolkit" class="column">
+                        <h2>Toolkit</h2>
+                        <ul id="toolkit__list">
+                            <li id="toolkit__list-icon-html">HTML</li>
+                            <li id="toolkit__list-icon-css">CSS</li>
+                            <li id="toolkit__list-icon-javascript">JavaScript</li>
+                            <li id="toolkit__list-icon-python">Python</li>
+                            <li id="toolkit__list-icon-git">Git</li>
+                        </ul>
+                    </div>
+                    <div id="about-me" class="column">
+                        <p>
+                            I'm a full-stack web developer (in training), and I'm excited to start creating some awesome
+                            and
+                            useful websites and applications in the near future!
+                        </p>
+                        <a class="button button-primary" id="contact" href="./contact.html">Get in
+                            touch</a>
                     </div>
                 </div>
-                <div id="toolkit" class="column">
-                    <h2>Toolkit</h2>
-                    <ul id="toolkit__list">
-                        <li id="toolkit__list-icon-html">HTML</li>
-                        <li id="toolkit__list-icon-css">CSS</li>
-                        <li id="toolkit__list-icon-javascript">JavaScript</li>
-                        <li id="toolkit__list-icon-python">Python</li>
-                        <li id="toolkit__list-icon-git">Git</li>
+            </section>
+            <!-- Experience -->
+            <section id="section-home-experience">
+                <div class="row">
+                    <header class="section-header">
+                        <h2>Experience</h2>
+                        <p class="section-description">I have a broad range of both technical and creative skills using
+                            digital media. My experience has
+                            ranged across a variety of roles and industries from 3D modelling and rendering to market
+                            research,
+                            hospitality, and most recently digital marketing.</p>
+                        <p>I hold a BA in Multimedia Design (2010) and a
+                            Master of Internet Communications (2015) from Curtin University. </p>
+                    </header>
+                    <div class="column">
+                        <!-- Info Card component -->
+                        <div class="info-card">
+                            <h3 class="info-card__heading">Digital Marketing Specialist</h3>
+                            <p class="info-card__detail">
+                                <span class="employer">Deluxe Shea Butter (Aust) Pty Ltd</span> <br>
+                                <time datetime="2020-03">March 2020</time> – Present
+                            </p>
+                            <ul class="info-card__list">
+                                <li>Creating and editing digital assets for website, social media, and print</li>
+                                <li>Graphic design of business cards, compliments slips, and brand catalogue</li>
+                                <li>Managing PPC accounts to maximise click-through and conversion rates</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="info-card">
+                            <h3 class="info-card__heading">Marketing Officer</h3>
+                            <p class="info-card__detail">
+                                <span class="employer">Centre for Stories</span> <br>
+                                <time datetime="2021-11">September 2021</time> – <time datetime="2022-04">April
+                                    2022</time>
+                            </p>
+                            <ul class="info-card__list">
+                                <li>Creating and publishing content including social media posts and newsletters</li>
+                                <li>Creating PPC and social media marketing campaigns for upcoming events</li>
+                                <li>Assisting with website content management and planning</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Professional Account Links component -->
+                    <div class="account-links">
+                        <a class="account-link__link" href="https://www.linkedin.com/in/kobbyasomani/" target="_blank">
+                            <img class="account-link__icon" src="./images/icons/dark/linkedin-brands.svg"
+                                alt="LinkedIn icon">
+                            <span class="account-link__text">Reach out on LinkedIn</span>
+                        </a>
+                        <a class="account-link__link" href="https://github.com/kobbyasomani" target="_blank">
+                            <img class="account-link__icon" src="./images/icons/dark/github-brands.svg"
+                                alt="GitHub icon">
+                            <span class="account-link__text">Follow my projects on GitHub</span>
+                        </a>
+                    </div>
+                    <div class="flex-line-break"></div>
+                    <a id="resume" class="button button-primary" href="./docs/Kobby%20Asomani%20Resume.pdf"
+                        download="Kobby Asomani Resume"><img id="resume__icon" class="icon"
+                            src="./images/icons/light/download-solid-light.svg">Download full resume</a>
+                    <div class="flex-line-break"></div>
+                </div>
+            </section>
+            <!-- Work -->
+            <section id="section-home-work">
+                <div class="row">
+                    <header class="section-header">
+                        <h2>Work</h2>
+                        <p class="section-description">A selection of web development projects that I've completed
+                            recently.
+                        </p>
+                    </header>
+                    <!-- Featured Project 1 -->
+                    <div class="column">
+                        <!-- Project Card component -->
+                        <article class="project-card">
+                            <header class="project-card__header">
+                                <h3 class="project-card__title">
+                                    <a href="./projects/project-1.html">Featured Project 1</a>
+                                </h3>
+                                <div class="project-card__ext-links">
+                                    <a class="project-card__icon-link" href="https://kobbyasomani.github.io/" target="
+                                -blank">
+                                        <img src="./images/icons/dark/link-solid.svg" alt="Visit the live project site">
+                                    </a>
+                                    <a class="project-card__icon-github"
+                                        href="https://github.com/kobbyasomani/kobbyasomani.github.io" target="
+                                -blank">
+                                        <img src="images/icons/dark/github-brands.svg"
+                                            alt="View this project on GitHub">
+                                    </a>
+                                </div>
+                            </header>
+                            <div class="project-card__image">
+                                <a href="./projects/project-1.html"><img src="./images/placeholder/magic-mouse.jpg"
+                                        alt="A wireless computer mouse."></a>
+                            </div>
+                            <div class="project-card__body">
+                                <p class="project-card__description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias tenetur est commodi
+                                    consequuntur veritatis ex earum incidunt dolorum vero.
+                                </p>
+                                <a class="project-card__link" href="./projects/project-1.html">View project details</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Featured Project 2 -->
+                    <div class="column">
+                        <article class="project-card">
+                            <header class="project-card__header">
+                                <h3 class="project-card__title">
+                                    <a href="./projects/project-2.html">Featured Project 2</a>
+                                </h3>
+                                <div class="project-card__ext-links">
+                                    <a class="project-card__icon-link" href="https://kobbyasomani.github.io/" target="
+                                -blank">
+                                        <img src="./images/icons/dark/link-solid.svg" alt="Visit the live project site">
+                                    </a>
+                                    <a class="project-card__icon-github"
+                                        href="https://github.com/kobbyasomani/kobbyasomani.github.io" target="
+                                -blank">
+                                        <img src="images/icons/dark/github-brands.svg"
+                                            alt="View this project on GitHub">
+                                    </a>
+                                </div>
+                            </header>
+                            <div class="project-card__image">
+                                <a href="./projects/project-2.html">
+                                    <img src="./images/placeholder/keyboard.jpg"
+                                        alt="Closeup of a keyboard with the caps lock key glowing.">
+                                </a>
+                            </div>
+                            <div class="project-card__body">
+                                <p class="project-card__description">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum doloremque
+                                    voluptatibus
+                                    amet
+                                    ut.
+                                </p>
+                                <a class="project-card__link" href="./projects/project-2.html">View project details</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Featured Project 3 -->
+                    <div class="column">
+                        <article class="project-card">
+                            <header class="project-card__header">
+                                <h3 class="project-card__title">
+                                    <a href="./projects/project-3.html">Featured Project 3</a>
+                                </h3>
+                                <div class="project-card__ext-links">
+                                    <a class="project-card__icon-link" href="https://kobbyasomani.github.io/" target="
+                                -blank">
+                                        <img src="./images/icons/dark/link-solid.svg" alt="Visit the live project site">
+                                    </a>
+                                    <a class="project-card__icon-github"
+                                        href="https://github.com/kobbyasomani/kobbyasomani.github.io" target="
+                                -blank">
+                                        <img src="images/icons/dark/github-brands.svg"
+                                            alt="View this project on GitHub">
+                                    </a>
+                                </div>
+                            </header>
+                            <div class="project-card__image">
+                                <a href="./projects/project-3.html">
+                                    <img src="./images/placeholder/headphones.jpg"
+                                        alt="A pair of headphones on a desk.">
+                                </a>
+                            </div>
+                            <div class="project-card__body">
+                                <p class="project-card__description">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum doloremque
+                                    voluptatibus
+                                    amet
+                                    ut.
+                                </p>
+                                <a class="project-card__link" href="./projects/project-3.html">View project details</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Featured Project 4 -->
+                    <div class="column">
+                        <article class="project-card">
+                            <header class="project-card__header">
+                                <h3>
+                                    <a href="./projects/project-4.html">Featured Project 4</a>
+                                </h3>
+                                <div class="project-card__ext-links">
+                                    <a class="project-card__icon-link" href="https://kobbyasomani.github.io/" target="
+                                -blank">
+                                        <img src="./images/icons/dark/link-solid.svg" alt="Visit the live project site">
+                                    </a>
+                                    <a class="project-card__icon-github"
+                                        href="https://github.com/kobbyasomani/kobbyasomani.github.io" target="
+                                -blank">
+                                        <img src="images/icons/dark/github-brands.svg"
+                                            alt="View this project on GitHub">
+                                    </a>
+                                </div>
+                            </header>
+                            <div class="project-card__image">
+                                <a href="./projects/project-4.html">
+                                    <img src="./images/placeholder/desk-blurry.jpg"
+                                        alt="A blurry photo of a computer desk.">
+                                </a>
+                            </div>
+                            <div class="project-card__body">
+                                <p class="project-card__description">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum doloremque
+                                    voluptatibus
+                                    amet
+                                    ut.
+                                </p>
+                                <a class="project-card__link" href="./projects/project-4.html">View project details</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="flex-line-break"></div>
+                    <a id="button-projects" class="button button-light" href="./work.html">View all projects</a>
+                </div>
+            </section>
+            <!-- Featured Blog Posts -->
+            <section id="section-home-blog">
+                <div class="row">
+                    <header class="section-header">
+                        <h2>Latest blog posts</h2>
+                        <p class="section-description">Read my blog to keep up with thoughts on web design and
+                            development.
+                        </p>
+                    </header>
+                    <!-- Featured Blog Post 1 -->
+                    <div class="column">
+                        <!-- Blog Post Card component -->
+                        <article class="blog-post-card">
+                            <header class="blog-post-card__header">
+                                <div class="blog-post-card__image">
+                                    <a href="./blog/blog-post-1.html">
+                                        <img src="./images/placeholder/journal-page.jpg"
+                                            alt="Journal page with rough sketches on it.">
+                                    </a>
+                                </div>
+                            </header>
+                            <div class="blog-post-card__body">
+                                <h3 class="blog-post-card__title"><a href="./blog/blog-post-1.html">Featured blog post
+                                        1</a>
+                                </h3>
+                                <span class="blog-post-card__date"><time datetime="2022-06-12">12 June
+                                        2022</time></span>
+                                <p class="blog-post-card__description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias ut
+                                    cumque,
+                                    vitae sint
+                                    nulla repudiandae impedit.
+                                </p>
+                                <a class="blog-post-card__link" href="./blog/blog-post-1/">Read post</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Featured Blog Post 2 -->
+                    <div class="column">
+                        <article class="blog-post-card">
+                            <header class="blog-post-card__header">
+                                <div class="blog-post-card__image">
+                                    <a href="./blog/blog-post-2.html">
+                                        <img src="./images/placeholder/journal-page.jpg"
+                                            alt="Journal page with rough sketches on it.">
+                                    </a>
+                                </div>
+                            </header>
+                            <div class="blog-post-card__body">
+                                <h3 class="blog-post-card__title"><a href="./blog/blog-post-2.html">Featured blog post
+                                        2</a>
+                                </h3>
+                                <span class="blog-post-card__date"><time datetime="2022-06-11">11 June
+                                        2022</time></span>
+                                <p class="blog-post-card__description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias ut
+                                    cumque,
+                                    vitae sint
+                                    nulla repudiandae impedit.
+                                </p>
+                                <a class="blog-post-card__link" href="./blog/blog-post-2/">Read post</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Featured Blog Post 3 -->
+                    <div class="column">
+                        <article class="blog-post-card">
+                            <header class="blog-post-card__header">
+                                <div class="blog-post-card__image">
+                                    <a href="./blog/blog-post-3.html">
+                                        <img src="./images/placeholder/journal-page.jpg"
+                                            alt="Journal page with rough sketches on it.">
+                                    </a>
+                                </div>
+                            </header>
+                            <div class="blog-post-card__body">
+                                <h3 class="blog-post-card__title"><a href="./blog/blog-post-3.html">Featured blog post
+                                        3</a>
+                                </h3>
+                                <span class="blog-post-card__date"><time datetime="2022-06-10">10 June
+                                        2022</time></span>
+                                <p class="blog-post-card__description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias ut
+                                    cumque,
+                                    vitae sint
+                                    nulla repudiandae impedit.
+                                </p>
+                                <a class="blog-post-card__link" href="./blog/blog-post-3/">Read post</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="flex-line-break"></div>
+                    <a class="button button-secondary" href="./blog.html">Visit my blog</a>
+                </div>
+            </section>
+            <!-- About me -->
+            <section id="section-home-about">
+                <div class="row">
+                    <header class="section-header">
+                        <h2>About me</h2>
+                        <p class="section-description">My interests and hobbies outside of web development include
+                            drawing,
+                            reading,
+                            music, video games, and photography.
+                        </p>
+                    </header>
+                    <div class="column">
+                        <div class="image-card">
+                            <a href="./about.html">
+                                <img src="./images/interests/book.jpg" alt="Closeup of a book with a bookmark in it.">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="image-card">
+                            <a href="./about.html"><img src="./images/interests/guitar.jpg"
+                                    alt="A person strumming an acoustic guitar.">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="image-card">
+                            <a href="./about.html">
+                                <img src=" ./images/interests/wet-grass.jpg"
+                                    alt="Long green leaves voered in warter droplets.">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex-line-break"></div>
+                    <a class="button button-secondary" href="./about.html">More about me</a>
+                </div>
+            </section>
+        </main>
+        <!-- Footer component -->
+        <footer>
+            <div id="footer-inner">
+                <div id="footer-inner__sitemap" class="column">
+                    <ul id="sitemap">
+                        <li>
+                            <h2 class="footer-heading">
+                                Sitemap
+                            </h2>
+                        </li>
+                        <li><a href="./">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./work.html">Work</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div id="about-me" class="column">
-                    <p>
-                        I'm a full-stack web developer (in training), and I'm excited to start creating some awesome and
-                        useful websites and applications in the near future!
-                    </p>
-                    <a class="button button-primary" id="contact" href="./contact.html">Get in
-                        touch</a>
-                </div>
-            </div>
-        </section>
-        <!-- Experience -->
-        <section id="section-home-experience">
-            <div class="row">
-                <header class="section-header">
-                    <h2>Experience</h2>
-                    <p class="section-description">I have a broad range of both technical and creative skills using
-                        digital media. My experience has
-                        ranged across a variety of roles and industries from 3D modelling and rendering to market
-                        research,
-                        hospitality, and most recently digital marketing.</p>
-                    <p>I hold a BA in Multimedia Design (2010) and a
-                        Master of Internet Communications (2015) from Curtin University. </p>
-                </header>
-                <div class="column">
-                    <!-- Info Card component -->
-                    <div class="info-card">
-                        <h3 class="info-card__heading">Digital Marketing Specialist</h3>
-                        <p class="info-card__detail">
-                            <span class="employer">Deluxe Shea Butter (Aust) Pty Ltd</span> <br>
-                            <time datetime="2020-03">March 2020</time> – Present
-                        </p>
-                        <ul class="info-card__list">
-                            <li>Creating and editing digital assets for website, social media, and print</li>
-                            <li>Graphic design of business cards, compliments slips, and brand catalogue</li>
-                            <li>Managing PPC accounts to maximise click-through and conversion rates</li>
-                        </ul>
+                <div id="footer-inner__social" class="column">
+                    <div id="footer-inner__follow">
+                        <h2 class="footer-heading">Follow me</h2>
+                        <!-- Social Icons Widget component -->
+                        <div class="social-icons-widget">
+                            <ul class="social-icons-widget__list">
+                                <li class="social-icons-widget__list-item">
+                                    <a class="social-icon__github" href="https://github.com/kobbyasomani"
+                                        target="_blank"><img src="./images/icons/light/github-brands-light.svg"
+                                            alt="GitHub icon"></a>
+                                </li>
+                                <li class="social-icons-widget__list-item">
+                                    <a class="social-icon__linkedin" href="https://www.linkedin.com/in/kobbyasomani/"
+                                        target="_blank"><img src="./images/icons/light/linkedin-brands-light.svg"
+                                            alt="LinkedIn icon"></a>
+                                </li>
+                                <li class="social-icons-widget__list-item">
+                                    <a class="social-icon__twitter" href="https://twitter.com/kobbyasomani"
+                                        target="_blank"><img src="./images/icons/light/twitter-brands-light.svg"
+                                            alt="Twitter icon"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="footer-inner__contact">
+                        <a id="mail" class="button" href="./contact.html"><span class="mail__icon"></span>Say hi!</a>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="info-card">
-                        <h3 class="info-card__heading">Marketing Officer</h3>
-                        <p class="info-card__detail">
-                            <span class="employer">Centre for Stories</span> <br>
-                            <time datetime="2021-11">September 2021</time> – <time datetime="2022-04">April 2022</time>
-                        </p>
-                        <ul class="info-card__list">
-                            <li>Creating and publishing content including social media posts and newsletters</li>
-                            <li>Creating PPC and social media marketing campaigns for upcoming events</li>
-                            <li>Assisting with website content management and planning</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Professional Account Links component -->
-                <div class="account-links">
-                    <a class="account-link__link" href="https://www.linkedin.com/in/kobbyasomani/" target="_blank">
-                        <img class="account-link__icon" src="./images/icons/dark/linkedin-brands.svg"
-                            alt="LinkedIn icon">
-                        <span class="account-link__text">Reach out on LinkedIn</span>
-                    </a>
-                    <a class="account-link__link" href="https://github.com/kobbyasomani" target="_blank">
-                        <img class="account-link__icon" src="./images/icons/dark/github-brands.svg" alt="GitHub icon">
-                        <span class="account-link__text">Follow my projects on GitHub</span>
-                    </a>
-                </div>
-                <div class="flex-line-break"></div>
-                <a id="resume" class="button button-primary" href="./docs/Kobby%20Asomani%20Resume.pdf"
-                    download="Kobby Asomani Resume"><img id="resume__icon" class="icon" src="./images/icons/light/download-solid-light.svg">Download full resume</a>
-                <div class="flex-line-break"></div>
+                <span id="copyright">© 2022 Kwabena Asomani</span>
             </div>
-        </section>
-        <!-- Work -->
-        <section id="section-home-work">
-            <div class="row">
-                <header class="section-header">
-                    <h2>Work</h2>
-                    <p class="section-description">A selection of web development projects that I've completed recently.
-                    </p>
-                </header>
-                <!-- Featured Project 1 -->
-                <div class="column">
-                    <!-- Project Card component -->
-                    <article class="project-card">
-                        <header class="project-card__header">
-                            <h3 class="project-card__title">
-                                <a href="./projects/project-1.html">Featured Project 1</a>
-                            </h3>
-                            <div class="project-card__ext-links">
-                                <a class="project-card__icon-link" href="https://kobbyasomani.github.io/" target="
-                                -blank">
-                                    <img src="./images/icons/dark/link-solid.svg" alt="Visit the live project site">
-                                </a>
-                                <a class="project-card__icon-github"
-                                    href="https://github.com/kobbyasomani/kobbyasomani.github.io" target="
-                                -blank">
-                                    <img src="images/icons/dark/github-brands.svg" alt="View this project on GitHub">
-                                </a>
-                            </div>
-                        </header>
-                        <div class="project-card__image">
-                            <a href="./projects/project-1.html"><img src="./images/placeholder/magic-mouse.jpg"
-                                    alt="A wireless computer mouse."></a>
-                        </div>
-                        <div class="project-card__body">
-                            <p class="project-card__description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias tenetur est commodi
-                                consequuntur veritatis ex earum incidunt dolorum vero.
-                            </p>
-                            <a class="project-card__link" href="./projects/project-1.html">View project details</a>
-                        </div>
-                    </article>
-                </div>
-                <!-- Featured Project 2 -->
-                <div class="column">
-                    <article class="project-card">
-                        <header class="project-card__header">
-                            <h3 class="project-card__title">
-                                <a href="./projects/project-2.html">Featured Project 2</a>
-                            </h3>
-                            <div class="project-card__ext-links">
-                                <a class="project-card__icon-link" href="https://kobbyasomani.github.io/" target="
-                                -blank">
-                                    <img src="./images/icons/dark/link-solid.svg" alt="Visit the live project site">
-                                </a>
-                                <a class="project-card__icon-github"
-                                    href="https://github.com/kobbyasomani/kobbyasomani.github.io" target="
-                                -blank">
-                                    <img src="images/icons/dark/github-brands.svg" alt="View this project on GitHub">
-                                </a>
-                            </div>
-                        </header>
-                        <div class="project-card__image">
-                            <a href="./projects/project-2.html">
-                                <img src="./images/placeholder/keyboard.jpg"
-                                    alt="Closeup of a keyboard with the caps lock key glowing.">
-                            </a>
-                        </div>
-                        <div class="project-card__body">
-                            <p class="project-card__description">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum doloremque voluptatibus
-                                amet
-                                ut.
-                            </p>
-                            <a class="project-card__link" href="./projects/project-2.html">View project details</a>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Featured Project 3 -->
-                <div class="column">
-                    <article class="project-card">
-                        <header class="project-card__header">
-                            <h3 class="project-card__title">
-                                <a href="./projects/project-3.html">Featured Project 3</a>
-                            </h3>
-                            <div class="project-card__ext-links">
-                                <a class="project-card__icon-link" href="https://kobbyasomani.github.io/" target="
-                                -blank">
-                                    <img src="./images/icons/dark/link-solid.svg" alt="Visit the live project site">
-                                </a>
-                                <a class="project-card__icon-github"
-                                    href="https://github.com/kobbyasomani/kobbyasomani.github.io" target="
-                                -blank">
-                                    <img src="images/icons/dark/github-brands.svg" alt="View this project on GitHub">
-                                </a>
-                            </div>
-                        </header>
-                        <div class="project-card__image">
-                            <a href="./projects/project-3.html">
-                                <img src="./images/placeholder/headphones.jpg" alt="A pair of headphones on a desk.">
-                            </a>
-                        </div>
-                        <div class="project-card__body">
-                            <p class="project-card__description">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum doloremque voluptatibus
-                                amet
-                                ut.
-                            </p>
-                            <a class="project-card__link" href="./projects/project-3.html">View project details</a>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Featured Project 4 -->
-                <div class="column">
-                    <article class="project-card">
-                        <header class="project-card__header">
-                            <h3>
-                                <a href="./projects/project-4.html">Featured Project 4</a>
-                            </h3>
-                            <div class="project-card__ext-links">
-                                <a class="project-card__icon-link" href="https://kobbyasomani.github.io/" target="
-                                -blank">
-                                    <img src="./images/icons/dark/link-solid.svg" alt="Visit the live project site">
-                                </a>
-                                <a class="project-card__icon-github"
-                                    href="https://github.com/kobbyasomani/kobbyasomani.github.io" target="
-                                -blank">
-                                    <img src="images/icons/dark/github-brands.svg" alt="View this project on GitHub">
-                                </a>
-                            </div>
-                        </header>
-                        <div class="project-card__image">
-                            <a href="./projects/project-4.html">
-                                <img src="./images/placeholder/desk-blurry.jpg"
-                                    alt="A blurry photo of a computer desk.">
-                            </a>
-                        </div>
-                        <div class="project-card__body">
-                            <p class="project-card__description">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum doloremque voluptatibus
-                                amet
-                                ut.
-                            </p>
-                            <a class="project-card__link" href="./projects/project-4.html">View project details</a>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="flex-line-break"></div>
-                <a id="button-projects" class="button button-light" href="./work.html">View all projects</a>
-            </div>
-        </section>
-        <!-- Featured Blog Posts -->
-        <section id="section-home-blog">
-            <div class="row">
-                <header class="section-header">
-                    <h2>Latest blog posts</h2>
-                    <p class="section-description">Read my blog to keep up with thoughts on web design and development.
-                    </p>
-                </header>
-                <!-- Featured Blog Post 1 -->
-                <div class="column">
-                    <!-- Blog Post Card component -->
-                    <article class="blog-post-card">
-                        <header class="blog-post-card__header">
-                            <div class="blog-post-card__image">
-                                <a href="./blog/blog-post-1.html">
-                                    <img src="./images/placeholder/journal-page.jpg"
-                                        alt="Journal page with rough sketches on it.">
-                                </a>
-                            </div>
-                        </header>
-                        <div class="blog-post-card__body">
-                            <h3 class="blog-post-card__title"><a href="./blog/blog-post-1.html">Featured blog post 1</a>
-                            </h3>
-                            <span class="blog-post-card__date"><time datetime="2022-06-12">12 June 2022</time></span>
-                            <p class="blog-post-card__description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias ut cumque,
-                                vitae sint
-                                nulla repudiandae impedit.
-                            </p>
-                            <a class="blog-post-card__link" href="./blog/blog-post-1/">Read post</a>
-                        </div>
-                    </article>
-                </div>
-                <!-- Featured Blog Post 2 -->
-                <div class="column">
-                    <article class="blog-post-card">
-                        <header class="blog-post-card__header">
-                            <div class="blog-post-card__image">
-                                <a href="./blog/blog-post-2.html">
-                                    <img src="./images/placeholder/journal-page.jpg"
-                                        alt="Journal page with rough sketches on it.">
-                                </a>
-                            </div>
-                        </header>
-                        <div class="blog-post-card__body">
-                            <h3 class="blog-post-card__title"><a href="./blog/blog-post-2.html">Featured blog post 2</a>
-                            </h3>
-                            <span class="blog-post-card__date"><time datetime="2022-06-11">11 June 2022</time></span>
-                            <p class="blog-post-card__description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias ut cumque,
-                                vitae sint
-                                nulla repudiandae impedit.
-                            </p>
-                            <a class="blog-post-card__link" href="./blog/blog-post-2/">Read post</a>
-                        </div>
-                    </article>
-                </div>
-                <!-- Featured Blog Post 3 -->
-                <div class="column">
-                    <article class="blog-post-card">
-                        <header class="blog-post-card__header">
-                            <div class="blog-post-card__image">
-                                <a href="./blog/blog-post-3.html">
-                                    <img src="./images/placeholder/journal-page.jpg"
-                                        alt="Journal page with rough sketches on it.">
-                                </a>
-                            </div>
-                        </header>
-                        <div class="blog-post-card__body">
-                            <h3 class="blog-post-card__title"><a href="./blog/blog-post-3.html">Featured blog post 3</a>
-                            </h3>
-                            <span class="blog-post-card__date"><time datetime="2022-06-10">10 June 2022</time></span>
-                            <p class="blog-post-card__description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias ut cumque,
-                                vitae sint
-                                nulla repudiandae impedit.
-                            </p>
-                            <a class="blog-post-card__link" href="./blog/blog-post-3/">Read post</a>
-                        </div>
-                    </article>
-                </div>
-                <div class="flex-line-break"></div>
-                <a class="button button-secondary" href="./blog.html">Visit my blog</a>
-            </div>
-        </section>
-        <!-- About me -->
-        <section id="section-home-about">
-            <div class="row">
-                <header class="section-header">
-                    <h2>About me</h2>
-                    <p class="section-description">My interests and hobbies outside of web development include drawing,
-                        reading,
-                        music, video games, and photography.
-                    </p>
-                </header>
-                <div class="column">
-                    <div class="image-card">
-                        <a href="./about.html">
-                            <img src="./images/interests/book.jpg" alt="Closeup of a book with a bookmark in it.">
-                        </a>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="image-card">
-                        <a href="./about.html"><img src="./images/interests/guitar.jpg"
-                                alt="A person strumming an acoustic guitar.">
-                        </a>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="image-card">
-                        <a href="./about.html">
-                            <img src=" ./images/interests/wet-grass.jpg"
-                                alt="Long green leaves voered in warter droplets.">
-                        </a>
-                    </div>
-                </div>
-                <div class="flex-line-break"></div>
-                <a class="button button-secondary" href="./about.html">More about me</a>
-            </div>
-        </section>
-    </main>
-    <!-- Footer component -->
-    <footer>
-        <div id="footer-inner">
-            <div id="footer-inner__sitemap" class="column">
-                <ul id="sitemap">
-                    <li>
-                        <h2 class="footer-heading">
-                            Sitemap
-                        </h2>
-                    </li>
-                    <li><a href="./">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./work.html">Work</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div id="footer-inner__social" class="column">
-                <div id="footer-inner__follow">
-                    <h2 class="footer-heading">Follow me</h2>
-                    <!-- Social Icons Widget component -->
-                    <div class="social-icons-widget">
-                        <ul class="social-icons-widget__list">
-                            <li class="social-icons-widget__list-item">
-                                <a class="social-icon__github" href="https://github.com/kobbyasomani"
-                                    target="_blank"><img src="./images/icons/light/github-brands-light.svg"
-                                        alt="GitHub icon"></a>
-                            </li>
-                            <li class="social-icons-widget__list-item">
-                                <a class="social-icon__linkedin" href="https://www.linkedin.com/in/kobbyasomani/"
-                                    target="_blank"><img src="./images/icons/light/linkedin-brands-light.svg"
-                                        alt="LinkedIn icon"></a>
-                            </li>
-                            <li class="social-icons-widget__list-item">
-                                <a class="social-icon__twitter" href="https://twitter.com/kobbyasomani"
-                                    target="_blank"><img src="./images/icons/light/twitter-brands-light.svg"
-                                        alt="Twitter icon"></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="footer-inner__contact">
-                    <a id="mail" class="button" href="./contact.html"><span class="mail__icon"></span>Say hi!</a>
-                </div>
-            </div>
-            <span id="copyright">© 2022 Kwabena Asomani</span>
-        </div>
-    </footer>
-
+        </footer>
+    </div>
     <script src="functions.js"></script>
 </body>
 

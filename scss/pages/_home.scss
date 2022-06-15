@@ -22,16 +22,6 @@
                 padding: 0;
             }
         }
-
-        #toolkit {
-            padding-left: 0;
-            margin: 0;
-
-            #toolkit__list {
-                list-style-type: none;
-                margin-left: 1em;
-            }
-        }
     }
 
     .account-links {
@@ -158,32 +148,6 @@
                     flex-basis: 71%;
                 }
             }
-
-            #toolkit {
-                order: 4;
-                grid-column: 1 / -1;
-                grid-row: 3;
-                padding: .75em;
-                flex-direction: row;
-                justify-content: flex-start;
-
-                #toolkit__list {
-                    li {
-                        display: inline;
-                        padding: 0 3em;
-                        border-right: 2px solid base.$neutral-light;
-
-                        &:first-of-type {
-                            padding-left: 0;
-                        }
-
-                        &:last-of-type {
-                            border-right: none;
-                        }
-                    }
-                }
-            }
-
         }
 
         // Change Experience and Work sections to a 3-column layout on large screens

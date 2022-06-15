@@ -14,7 +14,11 @@ html {
 body,
 main {
   min-height: calc(100vh - 251.5px);
-  overflow-x: hidden;
+  position: relative;
+}
+
+main {
+  overflow: clip;
 }
 
 main {
@@ -133,6 +137,216 @@ section .section-header,
     align-items: flex-start;
   }
 }
+/* ANIMATION */
+/* Card hover effects */
+.project-card:hover,
+.blog-post-card:hover,
+.project-summary-card:hover,
+.blog-summary-card:hover,
+#section-home-about .image-card a:hover,
+#section-home-about .project-card .project-card__image a:hover,
+.project-card #section-home-about .project-card__image a:hover,
+#section-home-about .blog-post-card .blog-post-card__header .blog-post-card__image a a:hover,
+.blog-post-card .blog-post-card__header .blog-post-card__image #section-home-about a a:hover {
+  filter: drop-shadow(0.1em 0.1em 0.15em rgba(0, 0, 0, 0.25));
+  transform: translateY(-0.2em);
+}
+
+.project-summary-card:hover,
+.blog-summary-card:hover {
+  background-color: #edf2f4;
+}
+
+/* Icon hover effects */
+a[class*=icon],
+#logo,
+#nav-main__mobile-close {
+  transition: all 0.3s ease-in-out;
+}
+a[class*=icon]:hover, a[class*=icon]:focus,
+#logo:hover,
+#logo:focus,
+#nav-main__mobile-close:hover,
+#nav-main__mobile-close:focus {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+#logo:hover a, #logo:focus a {
+  color: #b90c09;
+}
+
+/* Animated Background Images */
+*[id*=bg-image-container] {
+  position: absolute;
+}
+
+/* Blue Brace */
+#bg-image-container-1 {
+  top: 58px;
+  right: 22vw;
+}
+#bg-image-container-1 #bg-image-blue-brace {
+  position: absolute;
+  z-index: -1;
+  height: 37em;
+  opacity: 25%;
+  transform: rotateZ(30deg) translateY(0);
+  animation-duration: 7s;
+  animation-name: bg-image-hover-1;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes bg-image-hover-1 {
+  from {
+    top: 0;
+  }
+  50% {
+    top: 1.2em;
+  }
+  60% {
+    top: 1.3em;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes bg-image-hover-2 {
+  from {
+    top: 0;
+  }
+  45% {
+    top: -0.6em;
+  }
+  to {
+    top: 0;
+  }
+}
+
+/* Green opening tag */
+#bg-image-container-2 {
+  top: 80px;
+  left: 32vw;
+}
+#bg-image-container-2 #bg-image-green-tag {
+  position: absolute;
+  z-index: -1;
+  height: 5em;
+  opacity: 25%;
+  animation-duration: 3.5s;
+  animation-name: bg-image-hover-2;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes bg-image-hover-1 {
+  from {
+    top: 0;
+  }
+  50% {
+    top: 1.2em;
+  }
+  60% {
+    top: 1.3em;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes bg-image-hover-2 {
+  from {
+    top: 0;
+  }
+  45% {
+    top: -0.6em;
+  }
+  to {
+    top: 0;
+  }
+}
+
+/* Red Closing Tag */
+#bg-image-container-3 {
+  bottom: 480px;
+  right: 22vw;
+}
+#bg-image-container-3 #bg-image-red-tag {
+  position: absolute;
+  z-index: -1;
+  height: 8em;
+  opacity: 50%;
+  animation-duration: 6s;
+  animation-name: bg-image-hover-2;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes bg-image-hover-1 {
+  from {
+    top: 0;
+  }
+  50% {
+    top: 1.2em;
+  }
+  60% {
+    top: 1.3em;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes bg-image-hover-2 {
+  from {
+    top: 0;
+  }
+  45% {
+    top: -0.6em;
+  }
+  to {
+    top: 0;
+  }
+}
+
+/* Yellow Bracket */
+#bg-image-container-4 {
+  bottom: 500px;
+  left: 17vw;
+}
+#bg-image-container-4 #bg-image-yellow-bracket {
+  position: absolute;
+  z-index: -1;
+  height: 30em;
+  opacity: 30%;
+  transform: rotateZ(-26deg);
+  animation-duration: 6s;
+  animation-name: bg-image-hover-1;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes bg-image-hover-1 {
+  from {
+    top: 0;
+  }
+  50% {
+    top: 1.2em;
+  }
+  60% {
+    top: 1.3em;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes bg-image-hover-2 {
+  from {
+    top: 0;
+  }
+  45% {
+    top: -0.6em;
+  }
+  to {
+    top: 0;
+  }
+}
+
 /* COMPONENTS */
 /* Component — Nav Bar */
 #nav-main {
@@ -154,9 +368,14 @@ section .section-header,
   display: inline;
 }
 #nav-main .row {
-  padding-left: 2.75em;
-  padding-right: 2.75em;
-  align-items: center;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+@media screen and (min-width: 768px) {
+  #nav-main .row {
+    padding-left: 2.75em;
+    padding-right: 2.75em;
+  }
 }
 #nav-main a {
   color: #000;
@@ -242,7 +461,7 @@ section .section-header,
   display: none;
 }
 
-/* Component – Button */
+/* Components – Buttons */
 .button, .button-light, .button-secondary, .button-primary {
   border-radius: 2em;
   display: inline-block;
@@ -277,6 +496,82 @@ section .section-header,
 .button-light {
   background-color: #fff;
   color: #000;
+}
+
+/* Resume download button */
+#resume #resume__icon {
+  display: inline-block;
+  width: 1.2em;
+  margin-right: 0.5em;
+}
+
+/* Component - Home page toolkit */
+#toolkit {
+  padding-left: 0;
+  margin: 0;
+}
+#toolkit h2 {
+  margin-left: -1em;
+}
+#toolkit #toolkit__list {
+  list-style-type: none;
+  margin-left: 0.5em;
+}
+#toolkit #toolkit__list li[id*=toolkit__list-icon] {
+  display: flex;
+  align-items: center;
+}
+#toolkit #toolkit__list li[id*=toolkit__list-icon]:before {
+  display: inline-block;
+  width: 1.2em;
+  width: 0.75em;
+  margin-right: 0.25em;
+  margin-top: 0.2em;
+}
+#toolkit #toolkit__list #toolkit__list-icon-html:before {
+  content: url(./images/icons/dark/html5-brands.svg);
+}
+#toolkit #toolkit__list #toolkit__list-icon-css:before {
+  content: url(./images/icons/dark/css3-alt-brands.svg);
+}
+#toolkit #toolkit__list #toolkit__list-icon-javascript:before {
+  content: url(./images/icons/dark/js-brands.svg);
+}
+#toolkit #toolkit__list #toolkit__list-icon-python:before {
+  content: url(./images/icons/dark/python-brands.svg);
+}
+#toolkit #toolkit__list #toolkit__list-icon-git:before {
+  content: url(./images/icons/dark/git-alt-brands.svg);
+}
+@media screen and (min-width: 1100px) {
+  #toolkit {
+    order: 4;
+    grid-column: 1/-1;
+    grid-row: 3;
+    padding: 0.75em;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  #toolkit h2 {
+    margin-left: 0;
+  }
+  #toolkit #toolkit__list {
+    display: flex;
+    margin-left: 0.25em;
+  }
+  #toolkit #toolkit__list li[id*=toolkit__list-icon] {
+    padding: 0 3em;
+    border-right: 2px solid #edf2f4;
+  }
+  #toolkit #toolkit__list li[id*=toolkit__list-icon]:first-of-type {
+    padding-left: 0;
+  }
+  #toolkit #toolkit__list li[id*=toolkit__list-icon]:last-of-type {
+    border-right: none;
+  }
+  #toolkit #toolkit__list li[id*=toolkit__list-icon]:before {
+    width: 1.2em;
+  }
 }
 
 /* CARDS */
@@ -319,6 +614,7 @@ section .section-header,
 .image-card img, .blog-post-card .blog-post-card__header .blog-post-card__image a img, .project-card .project-card__image img {
   border-radius: inherit;
   object-fit: cover;
+  height: 100%;
 }
 
 /* Component - Info Card */
@@ -721,41 +1017,6 @@ footer #footer-inner #copyright {
   width: 1em;
 }
 
-/* ANIMATION */
-/* Card hover effects */
-.project-card:hover,
-.blog-post-card:hover,
-.project-summary-card:hover,
-.blog-summary-card:hover,
-#section-home-about .image-card a:hover {
-  filter: drop-shadow(0.1em 0.1em 0.15em rgba(0, 0, 0, 0.25));
-  transform: translateY(-0.2em);
-}
-
-.project-summary-card:hover,
-.blog-summary-card:hover {
-  background-color: #edf2f4;
-}
-
-/* Icon hover effects */
-a[class*=icon],
-#logo,
-#nav-main__mobile-close {
-  transition: all 0.3s ease-in-out;
-}
-a[class*=icon]:hover, a[class*=icon]:focus,
-#logo:hover,
-#logo:focus,
-#nav-main__mobile-close:hover,
-#nav-main__mobile-close:focus {
-  transform: scale(1.3);
-  cursor: pointer;
-}
-
-#logo:hover a, #logo:focus a {
-  color: #b90c09;
-}
-
 #main-home {
   /* Section - Introduction */
   /* Section - Work */
@@ -776,14 +1037,6 @@ a[class*=icon]:hover, a[class*=icon]:focus,
 }
 #main-home #section-home-intro #portrait #portrait__image {
   padding: 0;
-}
-#main-home #section-home-intro #toolkit {
-  padding-left: 0;
-  margin: 0;
-}
-#main-home #section-home-intro #toolkit #toolkit__list {
-  list-style-type: none;
-  margin-left: 1em;
 }
 #main-home .account-links {
   margin-left: auto;
@@ -907,25 +1160,6 @@ a[class*=icon]:hover, a[class*=icon]:focus,
   }
   #main-home #section-home-intro #about-me p {
     flex-basis: 71%;
-  }
-  #main-home #section-home-intro #toolkit {
-    order: 4;
-    grid-column: 1/-1;
-    grid-row: 3;
-    padding: 0.75em;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  #main-home #section-home-intro #toolkit #toolkit__list li {
-    display: inline;
-    padding: 0 3em;
-    border-right: 2px solid #edf2f4;
-  }
-  #main-home #section-home-intro #toolkit #toolkit__list li:first-of-type {
-    padding-left: 0;
-  }
-  #main-home #section-home-intro #toolkit #toolkit__list li:last-of-type {
-    border-right: none;
   }
   #main-home #section-home-experience .section-header {
     flex-basis: 33%;
@@ -1078,7 +1312,7 @@ a[class*=icon]:hover, a[class*=icon]:focus,
   }
   #interests .image-card.floating {
     position: absolute;
-    bottom: 25em;
+    bottom: 27em;
     left: 31em;
     max-width: 600px;
   }
@@ -1096,9 +1330,13 @@ a[class*=icon]:hover, a[class*=icon]:focus,
     left: 34em;
     width: 800px;
   }
+  #interests #art .interest-card__body {
+    position: relative;
+    top: 4em;
+  }
 }
 #main-work #projects {
-  background-color: #fff;
+  background-color: transparent;
   padding-top: 0;
 }
 #main-work h2 {
@@ -1193,6 +1431,7 @@ a[class*=icon]:hover, a[class*=icon]:focus,
 #main-blog #blog-post-list {
   background-color: #fff;
   padding-top: 0;
+  background-color: transparent;
 }
 #main-blog #blog-post-list .row {
   justify-content: flex-start;
@@ -1329,6 +1568,10 @@ a[class*=icon]:hover, a[class*=icon]:focus,
   }
 }
 
+main[id*=main-blog-post] {
+  /* Display the main section on project pages as a block and 
+  prevent showing on mobile mode when menu is open */
+}
 main[id*=main-blog-post]:not(main[class*=mobile-mode]) {
   display: block;
 }
@@ -1389,7 +1632,7 @@ main[id*=main-blog-post] .blog-post__date {
 }
 main[id*=main-project] {
   /* Display the main section on project pages as a block
-  and prevent main page content showing in 'mobile mode' */
+  and prevent main page content showing when menu is open in 'mobile mode' */
 }
 main[id*=main-project]:not(main[class*=mobile-mode]) {
   display: block;

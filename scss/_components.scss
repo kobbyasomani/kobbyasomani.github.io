@@ -1,4 +1,5 @@
 @use "base";
+@use "animation";
 
 /* COMPONENTS */
 /* Component — Nav Bar */
@@ -11,9 +12,14 @@
 
     // Add additional padding to line up with flex columns
     .row {
-        padding-left: 2em + base.$column-padding-side;
-        padding-right: 2em + base.$column-padding-side;
-        align-items: center;
+        // align-items: center;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+
+        @media screen and (min-width: 768px) {
+            padding-left: 2em + base.$column-padding-side;
+            padding-right: 2em + base.$column-padding-side;
+        }
     }
 
     a {
@@ -130,7 +136,7 @@
     display: none;
 }
 
-/* Component – Button */
+/* Components – Buttons */
 .button {
     @include base.button();
     @include base.center();
@@ -152,6 +158,98 @@
     color: base.$neutral-very-dark
 }
 
+/* Resume download button */
+#resume {
+    #resume__icon {
+        @include base.icon();
+        margin-right: .5em;
+    }
+}
+
+/* Component - Home page toolkit */
+#toolkit {
+    padding-left: 0;
+    margin: 0;
+
+    h2 {
+        margin-left: -1em;
+    }
+
+    #toolkit__list {
+        list-style-type: none;
+        margin-left: .5em;
+
+        li[id*="toolkit__list-icon"] {
+            display: flex;
+            align-items: center;
+        }
+
+        li[id*="toolkit__list-icon"]:before {
+            @include base.icon();
+            width: .75em;
+            margin-right: .25em;
+            margin-top: .2em;
+        }
+
+        #toolkit__list-icon-html:before {
+            content: url(./images/icons/dark/html5-brands.svg);
+        }
+
+        #toolkit__list-icon-css:before {
+            content: url(./images/icons/dark/css3-alt-brands.svg);
+        }
+
+        #toolkit__list-icon-javascript:before {
+            content: url(./images/icons/dark/js-brands.svg);
+        }
+
+        #toolkit__list-icon-python:before {
+            content: url(./images/icons/dark/python-brands.svg);
+        }
+
+        #toolkit__list-icon-git:before {
+            content: url(./images/icons/dark/git-alt-brands.svg);
+        }
+    }
+
+    @media screen and (min-width: 1100px) {
+        // Inline the toolkit list on wider displays
+
+        order: 4;
+        grid-column: 1 / -1;
+        grid-row: 3;
+        padding: .75em;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        h2 {
+            margin-left: 0;
+        }
+
+        #toolkit__list {
+            display: flex;
+            margin-left: .25em;
+
+            li[id*="toolkit__list-icon"] {
+                padding: 0 3em;
+                border-right: 2px solid base.$neutral-light;
+
+                &:first-of-type {
+                    padding-left: 0;
+                }
+
+                &:last-of-type {
+                    border-right: none;
+                }
+
+                &:before {
+                    width: 1.2em;
+                }
+            }
+        }
+    }
+}
+
 /* CARDS */
 /* Component - Image Card */
 .image-card {
@@ -162,6 +260,7 @@
     img {
         border-radius: inherit;
         object-fit: cover;
+        height: 100%;
     }
 }
 
@@ -381,7 +480,7 @@ footer {
     }
 }
 
-// Style Footer for 'mobile mode' (hamburger menu toggled)
+// Fix the Footer to the bottom of the viewport in 'mobile mode' (hamburger menu toggled)
 @media screen and (max-width: 768px) {
     footer.mobile-mode {
         position: fixed;

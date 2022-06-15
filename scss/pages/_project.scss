@@ -3,11 +3,10 @@
 main[id*="main-project"] {
 
     /* Display the main section on project pages as a block
-    and prevent main page content showing in 'mobile mode' */
+    and prevent main page content showing when menu is open in 'mobile mode' */
     &:not(main[class*="mobile-mode"]) {
         display: block;
     }
-
 
     #project {
         background-color: base.$neutral-very-light;

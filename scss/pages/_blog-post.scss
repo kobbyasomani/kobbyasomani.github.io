@@ -1,9 +1,11 @@
 @use "../base";
 
 main[id*="main-blog-post"] {
-    // Display the main section on project pages as a block
-    &:not(main[class*="mobile-mode"]) { // Prevent showing on mobile mode
-    display: block;
+
+    /* Display the main section on project pages as a block and 
+    prevent showing on mobile mode when menu is open */
+    &:not(main[class*="mobile-mode"]) {
+        display: block;
     }
 
     #blog-post {

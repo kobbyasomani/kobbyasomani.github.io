@@ -42,3 +42,114 @@ a[class*="icon"],
         }
     }
 }
+
+// Background element hover animation
+@mixin animate__bg-image-hover {
+    @keyframes bg-image-hover-1 {
+        from {
+            top: 0;
+        }
+
+        50% {
+            top: 1.2em;
+        }
+
+        60% {
+            top: 1.3em;
+        }
+
+        to {
+            top: 0;
+        }
+    }
+
+    @keyframes bg-image-hover-2 {
+        from {
+            top: 0;
+        }
+
+        45% {
+            top: -.6em;
+        }
+
+        to {
+            top: 0;
+        }
+    }
+
+}
+
+/* Animated Background Images */
+*[id*="bg-image-container"] {
+    position: absolute;
+}
+
+/* Blue Brace */
+#bg-image-container-1 {
+    top: 58px;
+    right: 22vw;
+
+    #bg-image-blue-brace {
+        @include base.bg-image();
+        @include animate__bg-image-hover;
+        height: 37em;
+        opacity: 25%;
+        transform: rotateZ(30deg) translateY(0);
+        animation-duration: 7s;
+        animation-name: bg-image-hover-1;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+}
+
+/* Green opening tag */
+#bg-image-container-2 {
+    top: 80px;
+    left: 32vw;
+
+    #bg-image-green-tag {
+        @include base.bg-image();
+        @include animate__bg-image-hover();
+        height: 5em;
+        opacity: 25%;
+        animation-duration: 3.5s;
+        animation-name: bg-image-hover-2;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+}
+
+/* Red Closing Tag */
+#bg-image-container-3 {
+    bottom: 480px;
+    right: 22vw;
+
+    #bg-image-red-tag {
+        @include base.bg-image();
+        @include animate__bg-image-hover();
+        height: 8em;
+        opacity: 50%;
+        animation-duration: 6s;
+        animation-name: bg-image-hover-2;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+}
+
+/* Yellow Bracket */
+#bg-image-container-4 {
+    bottom: 500px;
+    left: 17vw;
+
+    #bg-image-yellow-bracket {
+        @include base.bg-image();
+        @include animate__bg-image-hover();
+        height: 30em;
+        opacity: 30%;
+        transform: rotateZ(-26deg);
+        animation-duration: 6s;
+        animation-name: bg-image-hover-1;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+}

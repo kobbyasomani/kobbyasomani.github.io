@@ -87,7 +87,7 @@
         // Absolutely position the floating Image Card
         .image-card.floating {
             position: absolute;
-            bottom: 25em;
+            bottom: 27em;
             left: 31em;
             max-width: 600px;
         }
@@ -116,6 +116,12 @@
         .image-card.floating {
             left: 34em;
             width: 800px;
+        }
+
+        // Reposition art card text for better contrast with image
+        #art .interest-card__body {
+            position: relative;
+            top: 4em;
         }
     }
 }

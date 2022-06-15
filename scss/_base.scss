@@ -217,6 +217,12 @@ $transition-short: all .3s ease-in-out;
     transform: translateY(-.2em);
 }
 
+// Mixin - Background Image
+@mixin bg-image {
+    position: absolute;
+    z-index: -1;
+}
+
 /* Style Resets and Defaults */
 // Reset padding and margin on all elements, set page font, border-box as default
 * {
@@ -235,7 +241,11 @@ html {
 body,
 main {
     min-height: calc(100vh - 251.5px);
-    overflow-x: hidden;
+    position: relative;
+}
+
+main {
+    overflow: clip;
 }
 
 // Generic styling for links in the page body
